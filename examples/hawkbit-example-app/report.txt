@@ -1,0 +1,1223 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building hawkBit-example :: UI Application 0.2.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:1.3.7.RELEASE:run (default-cli) > test-compile @ hawkbit-example-app >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots) @ hawkbit-example-app ---
+[INFO] Skipping Rule Enforcement.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hawkbit-example-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 2 resources to C:\Developement\Workspace\HawkBit\hawkbit-parent\examples\hawkbit-example-app\target
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ hawkbit-example-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hawkbit-example-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Developement\Workspace\HawkBit\hawkbit-parent\examples\hawkbit-example-app\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ hawkbit-example-app ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:1.3.7.RELEASE:run (default-cli) < test-compile @ hawkbit-example-app <<<
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.3.7.RELEASE:run (default-cli) @ hawkbit-example-app ---
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.7.RELEASE)
+
+2016-10-11 09:54:46.808  INFO 6996 --- [           main] org.eclipse.hawkbit.app.Start            : Starting Start on MD1J5XTC with PID 6996 (C:\Developement\Workspace\HawkBit\hawkbit-parent\examples\hawkbit-example-app\target\classes started by z003pceu in C:\Developement\Workspace\HawkBit\hawkbit-parent\examples\hawkbit-example-app)
+2016-10-11 09:54:46.816  INFO 6996 --- [           main] org.eclipse.hawkbit.app.Start            : The following profiles are active: amqp
+2016-10-11 09:54:46.816 DEBUG 6996 --- [           main] o.s.boot.SpringApplication               : Loading source class org.eclipse.hawkbit.app.Start
+2016-10-11 09:54:46.974 DEBUG 6996 --- [           main] o.s.b.c.c.ConfigFileApplicationListener  : Activated profiles amqp
+2016-10-11 09:54:46.975 DEBUG 6996 --- [           main] o.s.b.c.c.ConfigFileApplicationListener  : Loaded config file 'classpath:/application.properties'
+2016-10-11 09:54:46.975 DEBUG 6996 --- [           main] o.s.b.c.c.ConfigFileApplicationListener  : Skipped (empty) config file 'classpath:/application.properties' for profile amqp
+2016-10-11 09:54:46.975 DEBUG 6996 --- [           main] o.s.b.c.c.ConfigFileApplicationListener  : Skipped (empty) config file 'classpath:/application.properties' for profile default
+2016-10-11 09:54:46.989  INFO 6996 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a7a0cd6: startup date [Tue Oct 11 09:54:46 CEST 2016]; root of context hierarchy
+2016-10-11 09:54:46.998 DEBUG 6996 --- [           main] ationConfigEmbeddedWebApplicationContext : Bean factory for org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a7a0cd6: org.springframework.beans.factory.support.DefaultListableBeanFactory@4b4bd8d6: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,start]; root of factory hierarchy
+2016-10-11 09:54:54.629  INFO 6996 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'methodSecurityInterceptor' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.vaadin.spring.security.config.VaadinSecurityConfiguration$GlobalMethodSecurity; factoryMethodName=methodSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class org.vaadin.spring.security.config.VaadinSecurityConfiguration$GlobalMethodSecurity] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration; factoryMethodName=methodSecurityInterceptor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/method/configuration/GlobalMethodSecurityConfiguration.class]]
+2016-10-11 09:54:54.632  INFO 6996 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'methodSecurityMetadataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.vaadin.spring.security.config.VaadinSecurityConfiguration$GlobalMethodSecurity; factoryMethodName=methodSecurityMetadataSource; initMethodName=null; destroyMethodName=(inferred); defined in class org.vaadin.spring.security.config.VaadinSecurityConfiguration$GlobalMethodSecurity] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration; factoryMethodName=methodSecurityMetadataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/method/configuration/GlobalMethodSecurityConfiguration.class]]
+2016-10-11 09:54:54.633  INFO 6996 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'preInvocationAuthorizationAdvice' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.vaadin.spring.security.config.VaadinSecurityConfiguration$GlobalMethodSecurity; factoryMethodName=preInvocationAuthorizationAdvice; initMethodName=null; destroyMethodName=(inferred); defined in class org.vaadin.spring.security.config.VaadinSecurityConfiguration$GlobalMethodSecurity] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration; factoryMethodName=preInvocationAuthorizationAdvice; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/config/annotation/method/configuration/GlobalMethodSecurityConfiguration.class]]
+2016-10-11 09:54:55.886  INFO 6996 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'vaadinRedirectStrategy' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.vaadin.spring.security.config.VaadinSecurityConfiguration; factoryMethodName=vaadinRedirectStrategy; initMethodName=null; destroyMethodName=(inferred); defined in class org.vaadin.spring.security.config.VaadinSecurityConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityManagedConfiguration.UISecurityConfigurationAdapter; factoryMethodName=vaadinRedirectStrategy; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/eclipse/hawkbit/autoconfigure/security/SecurityManagedConfiguration$UISecurityConfigurationAdapter.class]]
+2016-10-11 09:54:55.964  INFO 6996 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'vaadinServletRegistration' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.vaadin.spring.boot.internal.VaadinServletConfiguration; factoryMethodName=vaadinServletRegistration; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/vaadin/spring/boot/internal/VaadinServletConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=asyncVaadinServletConfiguration; factoryMethodName=vaadinServletRegistration; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/eclipse/hawkbit/push/AsyncVaadinServletConfiguration.class]]
+2016-10-11 09:54:55.965  INFO 6996 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'vaadinUiForwardingHandlerMapping' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.vaadin.spring.boot.internal.VaadinServletConfiguration; factoryMethodName=vaadinUiForwardingHandlerMapping; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/vaadin/spring/boot/internal/VaadinServletConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=asyncVaadinServletConfiguration; factoryMethodName=vaadinUiForwardingHandlerMapping; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/eclipse/hawkbit/push/AsyncVaadinServletConfiguration.class]]
+2016-10-11 09:54:55.966  INFO 6996 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'vaadinUiForwardingController' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.vaadin.spring.boot.internal.VaadinServletConfiguration; factoryMethodName=vaadinUiForwardingController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/vaadin/spring/boot/internal/VaadinServletConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=asyncVaadinServletConfiguration; factoryMethodName=vaadinUiForwardingController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/eclipse/hawkbit/push/AsyncVaadinServletConfiguration.class]]
+2016-10-11 09:54:56.298 DEBUG 6996 --- [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'org.eclipse.hawkbit.app'. Automatic @Repository and @Entity scanning is enabled.
+2016-10-11 09:54:56.533  WARN 6996 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-10-11 09:54:57.359  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration' of type [class org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$$EnhancerBySpringCGLIB$$b3c25607] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.366  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'stringOrNumberMigrationVersionConverter' of type [class org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$StringOrNumberToMigrationVersionConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.498  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource.CONFIGURATION_PROPERTIES' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.499  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$NonEmbeddedConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$NonEmbeddedConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.661  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.apache.tomcat.jdbc.pool.DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.679  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.jpa.CONFIGURATION_PROPERTIES' of type [class org.springframework.boot.autoconfigure.orm.jpa.JpaProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.705  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'hawkbit.threadpool.CONFIGURATION_PROPERTIES' of type [class org.eclipse.hawkbit.autoconfigure.scheduling.AsyncConfigurerThreadpoolProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.706  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'executorAutoConfiguration' of type [class org.eclipse.hawkbit.autoconfigure.scheduling.ExecutorAutoConfiguration$$EnhancerBySpringCGLIB$$89e87012] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.734  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'asyncExecutor' of type [class org.springframework.security.concurrent.DelegatingSecurityContextExecutorService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.735  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'eventBusAutoConfiguration' of type [class org.eclipse.hawkbit.autoconfigure.eventbus.EventBusAutoConfiguration$$EnhancerBySpringCGLIB$$f11d87b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.847  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'eventBus' of type [class com.google.common.eventbus.AsyncEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.848  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.eclipse.hawkbit.RepositoryApplicationConfiguration' of type [class org.eclipse.hawkbit.RepositoryApplicationConfiguration$$EnhancerBySpringCGLIB$$367f7d91] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:57.910  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$4fb47ccb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.095  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8948be9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.504  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'jpaVendorAdapter' of type [class org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.522  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'createRepositoryExceptionHandlerAdvice' of type [class org.eclipse.hawkbit.repository.jpa.aspects.ExceptionMappingAspectHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.800  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'securityAutoConfiguration' of type [class org.eclipse.hawkbit.autoconfigure.security.SecurityAutoConfiguration$$EnhancerBySpringCGLIB$$41050251] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.833  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'tenantAware' of type [class org.eclipse.hawkbit.security.SecurityContextTenantAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.836  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheAutoConfiguration' of type [class org.eclipse.hawkbit.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$eb53ff29] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.870  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'directCacheManager' of type [class org.springframework.cache.guava.GuavaCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.882  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [class org.eclipse.hawkbit.cache.TenantAwareCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:58.891  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$d25af4bb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:59.035  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [class org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$21f686d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:59.061  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [class org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:59.067  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@21b5f82b' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:59.084  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [class org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$46cb2989] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:59.126  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [class org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:59.158  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.vaadin.spring.security.config.VaadinSecurityConfiguration' of type [class org.vaadin.spring.security.config.VaadinSecurityConfiguration$$EnhancerBySpringCGLIB$$23bc2d17] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:59.221  INFO 6996 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.vaadin.spring.events.config.EventBusConfiguration' of type [class org.vaadin.spring.events.config.EventBusConfiguration$$EnhancerBySpringCGLIB$$820c754b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-11 09:54:59.416 DEBUG 6996 --- [           main] ationConfigEmbeddedWebApplicationContext : Using MessageSource [org.eclipse.hawkbit.DistributedResourceBundleMessageSource: basenames=[classpath*:/messages]]
+2016-10-11 09:54:59.417 DEBUG 6996 --- [           main] ationConfigEmbeddedWebApplicationContext : Using ApplicationEventMulticaster [org.springframework.context.event.SimpleApplicationEventMulticaster@838b6bb]
+2016-10-11 09:55:00.280 DEBUG 6996 --- [           main] .t.TomcatEmbeddedServletContainerFactory : Code archive: C:\Users\Z003PCEU\.m2\repository\org\springframework\boot\spring-boot\1.3.7.RELEASE\spring-boot-1.3.7.RELEASE.jar
+2016-10-11 09:55:00.282 DEBUG 6996 --- [           main] .t.TomcatEmbeddedServletContainerFactory : Code archive: C:\Users\Z003PCEU\.m2\repository\org\springframework\boot\spring-boot\1.3.7.RELEASE\spring-boot-1.3.7.RELEASE.jar
+2016-10-11 09:55:00.284 DEBUG 6996 --- [           main] .t.TomcatEmbeddedServletContainerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2016-10-11 09:55:00.405  INFO 6996 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-10-11 09:55:00.438  INFO 6996 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-10-11 09:55:00.440  INFO 6996 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-10-11 09:55:00.692  INFO 6996 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-10-11 09:55:00.693  INFO 6996 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13714 ms
+2016-10-11 09:55:02.323  INFO 6996 --- [ost-startStop-1] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-10-11 09:55:02.545  INFO 6996 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:37}] to localhost:27017
+2016-10-11 09:55:02.557  INFO 6996 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 9]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=10065478}
+2016-10-11 09:55:03.142  WARN 6996 --- [ost-startStop-1] org.flywaydb.core.Flyway                 : Flyway.isInitOnMigrate() is deprecated. Use isBaselineOnMigrate() instead. Will be removed in Flyway 4.0.
+2016-10-11 09:55:03.143  WARN 6996 --- [ost-startStop-1] org.flywaydb.core.Flyway                 : Flyway.setInitOnMigrate() is deprecated. Use setBaselineOnMigrate() instead. Will be removed in Flyway 4.0.
+2016-10-11 09:55:03.202  INFO 6996 --- [ost-startStop-1] o.f.core.internal.util.VersionPrinter    : Flyway 3.2.1 by Boxfuse
+2016-10-11 09:55:03.743  INFO 6996 --- [ost-startStop-1] o.f.c.i.dbsupport.DbSupportFactory       : Database: jdbc:h2:mem:testdb (H2 1.4)
+2016-10-11 09:55:03.922  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbValidate     : Validated 7 migrations (execution time 00:00.042s)
+2016-10-11 09:55:03.951  INFO 6996 --- [ost-startStop-1] o.f.c.i.metadatatable.MetaDataTableImpl  : Creating Metadata table: "PUBLIC"."schema_version"
+2016-10-11 09:55:04.001  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2016-10-11 09:55:04.001  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.0.1 - init   
+2016-10-11 09:55:04.887  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2.0 - update target info for message   
+2016-10-11 09:55:04.906  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4.0 - cascade delete   
+2016-10-11 09:55:04.945  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4.1 - cascade delete   
+2016-10-11 09:55:04.957  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5.0 - target filter query   
+2016-10-11 09:55:04.971  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6.0 - rollout management   
+2016-10-11 09:55:05.061  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7.0 - swmType maxAssignment greater 0  
+2016-10-11 09:55:05.072  INFO 6996 --- [ost-startStop-1] o.f.core.internal.command.DbMigrate      : Successfully applied 7 migrations to schema "PUBLIC" (execution time 00:01.124s).
+2016-10-11 09:55:05.378  INFO 6996 --- [ost-startStop-1] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-10-11 09:55:06.201  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.AbstractJpaBaseEntity]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.203  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.AbstractJpaBaseEntity]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.204  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.AbstractJpaBaseEntity]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.204  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.AbstractJpaBaseEntity]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.248  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaAction]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.249  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaAction]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.251  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaAction]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.251  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaAction]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.257  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaLocalArtifact]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.257  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaLocalArtifact]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.258  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaLocalArtifact]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.259  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaLocalArtifact]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.261  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaExternalArtifact]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.262  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaExternalArtifact]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.262  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaExternalArtifact]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.263  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaExternalArtifact]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.274  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaRolloutGroup]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.274  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaRolloutGroup]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.275  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaRolloutGroup]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.275  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaRolloutGroup]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.281  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTarget]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.282  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTarget]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.282  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTarget]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.283  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTarget]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.285  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTargetTag]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.286  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTargetTag]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.287  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTargetTag]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.287  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTargetTag]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.290  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaRollout]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.291  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaRollout]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.291  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaRollout]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.292  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaRollout]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.293  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTenantConfiguration]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.293  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTenantConfiguration]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.294  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTenantConfiguration]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.294  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTenantConfiguration]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.310  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaActionStatus]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.311  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaActionStatus]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.312  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaActionStatus]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.312  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaActionStatus]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.313  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTenantMetaData]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.314  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTenantMetaData]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.314  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTenantMetaData]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.315  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTenantMetaData]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.319  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetType]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.320  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetType]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.320  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetType]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.321  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetType]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.322  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTargetFilterQuery]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.323  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTargetFilterQuery]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.323  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTargetFilterQuery]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.323  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaTargetFilterQuery]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.325  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaSoftwareModuleType]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.325  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaSoftwareModuleType]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.326  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaSoftwareModuleType]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.326  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaSoftwareModuleType]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.328  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetTag]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.328  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetTag]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.329  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetTag]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.329  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetTag]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.331  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaSoftwareModule]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.331  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaSoftwareModule]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.332  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaSoftwareModule]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.332  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaSoftwareModule]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.333  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaExternalArtifactProvider]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.334  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaExternalArtifactProvider]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.334  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaExternalArtifactProvider]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.334  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaExternalArtifactProvider]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.337  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdAt] with the PROPERTY mapping attribute [method getCreatedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSet]. To avoid this warning you should mark the attribute [field createdAt] as transient.
+2016-10-11 09:55:06.338  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field createdBy] with the PROPERTY mapping attribute [method getCreatedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSet]. To avoid this warning you should mark the attribute [field createdBy] as transient.
+2016-10-11 09:55:06.339  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedBy] with the PROPERTY mapping attribute [method getLastModifiedBy] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSet]. To avoid this warning you should mark the attribute [field lastModifiedBy] as transient.
+2016-10-11 09:55:06.339  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : Overriding the FIELD mapping attribute [field lastModifiedAt] with the PROPERTY mapping attribute [method getLastModifiedAt] from class [org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSet]. To avoid this warning you should mark the attribute [field lastModifiedAt] as transient.
+2016-10-11 09:55:06.432  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_action.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.462  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_artifact.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.464  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_external_artifact.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.467  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_rolloutgroup.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.472  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_target.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.475  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_target_tag.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.477  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_rollout.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.480  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_tenant_configuration.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.484  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_action_status.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.489  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_distribution_set_type.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.491  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_target_filter_query.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.493  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_software_module_type.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.495  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_distributionset_tag.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.497  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_base_software_module.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.499  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_external_provider.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:06.502  WARN 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.metadata           : The tenant discriminator context property for the tenant discriminator column [sp_distribution_set.tenant] on the element [class org.eclipse.hawkbit.repository.jpa.model.AbstractJpaTenantAwareBaseEntity] is being defaulted to: eclipselink.tenant-id.
+2016-10-11 09:55:07.013  INFO 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.jar_default          : EclipseLink, version: Eclipse Persistence Services - 2.6.2.v20151217-774c696
+2016-10-11 09:55:07.206  INFO 6996 --- [ost-startStop-1] o.e.p.s./.m.2.0.2.0.j.connection         : /file:/C:/Users/Z003PCEU/.m2/repository/org/eclipse/hawkbit/hawkbit-repository-jpa/0.2.0-SNAPSHOT/hawkbit-repository-jpa-0.2.0-SNAPSHOT.jar_default login successful
+2016-10-11 09:55:10.783  INFO 6996 --- [ost-startStop-1] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet
+2016-10-11 09:55:10.784  INFO 6996 --- [ost-startStop-1] c.v.s.b.i.VaadinServletConfiguration     : Servlet will be mapped to URLs [/UI, /UI/*, /VAADIN/*]
+2016-10-11 09:55:10.898  INFO 6996 --- [ost-startStop-1] c.v.s.b.i.VaadinServletConfiguration     : Setting servlet init parameters
+2016-10-11 09:55:10.899  INFO 6996 --- [ost-startStop-1] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [productionMode] = [false]
+2016-10-11 09:55:10.899  INFO 6996 --- [ost-startStop-1] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [resourceCacheTime] = [3600]
+2016-10-11 09:55:10.899  INFO 6996 --- [ost-startStop-1] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [heartbeatInterval] = [60]
+2016-10-11 09:55:10.899  INFO 6996 --- [ost-startStop-1] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [closeIdleSessions] = [false]
+2016-10-11 09:55:11.120 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Added existing Filter initializer bean 'securityFilterChainRegistration'; order=-100, resource=class path resource [org/springframework/boot/autoconfigure/security/SecurityFilterAutoConfiguration.class]
+2016-10-11 09:55:11.120 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Added existing EventListener initializer bean 'httpSessionEventPublisher'; order=2147483647, resource=class path resource [org/eclipse/hawkbit/autoconfigure/security/SecurityManagedConfiguration$UISecurityConfigurationAdapter.class]
+2016-10-11 09:55:11.121 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Added existing Filter initializer bean 'dosFilter'; order=2147483647, resource=class path resource [org/eclipse/hawkbit/autoconfigure/security/SecurityManagedConfiguration.class]
+2016-10-11 09:55:11.122 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Added existing Filter initializer bean 'eTagFilter'; order=2147483647, resource=class path resource [org/eclipse/hawkbit/autoconfigure/security/SecurityManagedConfiguration.class]
+2016-10-11 09:55:11.122 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Added existing Servlet initializer bean 'vaadinServletRegistration'; order=2147483647, resource=class path resource [org/eclipse/hawkbit/push/AsyncVaadinServletConfiguration.class]
+2016-10-11 09:55:11.123 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/DispatcherServletAutoConfiguration$DispatcherServletConfiguration.class]
+2016-10-11 09:55:11.290 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/HttpEncodingAutoConfiguration.class]
+2016-10-11 09:55:11.290 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Created Filter initializer for bean 'hiddenHttpMethodFilter'; order=-10000, resource=class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration.class]
+2016-10-11 09:55:11.290 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Created Filter initializer for bean 'httpPutFormContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration.class]
+2016-10-11 09:55:11.290 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Created Filter initializer for bean 'httpResponseFilter'; order=2147483647, resource=class path resource [org/vaadin/spring/config/VaadinExtensionsConfiguration.class]
+2016-10-11 09:55:11.291 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Created Filter initializer for bean 'filterHttpResponse'; order=2147483647, resource=class path resource [org/eclipse/hawkbit/rest/configuration/RestConfiguration.class]
+2016-10-11 09:55:11.312 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.e.ServletContextInitializerBeans : Created EventListener initializer for bean 'requestContextListener'; order=2147483647, resource=class path resource [org/vaadin/spring/config/VaadinExtensionsConfiguration.class]
+2016-10-11 09:55:11.326  INFO 6996 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-10-11 09:55:11.327  INFO 6996 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-10-11 09:55:11.327  INFO 6996 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-10-11 09:55:11.329  INFO 6996 --- [ost-startStop-1] .e.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-10-11 09:55:11.329  INFO 6996 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'dosFilter' to urls: [/{tenant}/controller/v1/*, /rest/*]
+2016-10-11 09:55:11.330  INFO 6996 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'excludePathAwareShallowETagFilter' to: [/*]
+2016-10-11 09:55:11.330  INFO 6996 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpResponseFilter' to: [/*]
+2016-10-11 09:55:11.331  INFO 6996 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'filterHttpResponse' to: [/*]
+2016-10-11 09:55:11.332  INFO 6996 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'springVaadinServlet' to [/UI, /UI/*, /VAADIN/*]
+2016-10-11 09:55:11.334  INFO 6996 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-10-11 09:55:11.403 DEBUG 6996 --- [ost-startStop-1] .s.b.c.w.OrderedHttpPutFormContentFilter : Initializing filter 'httpPutFormContentFilter'
+2016-10-11 09:55:11.403 DEBUG 6996 --- [ost-startStop-1] .s.b.c.w.OrderedHttpPutFormContentFilter : Filter 'httpPutFormContentFilter' configured successfully
+2016-10-11 09:55:11.403 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.w.OrderedHiddenHttpMethodFilter  : Initializing filter 'hiddenHttpMethodFilter'
+2016-10-11 09:55:11.403 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.w.OrderedHiddenHttpMethodFilter  : Filter 'hiddenHttpMethodFilter' configured successfully
+2016-10-11 09:55:11.404 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.w.OrderedCharacterEncodingFilter : Initializing filter 'characterEncodingFilter'
+2016-10-11 09:55:11.404 DEBUG 6996 --- [ost-startStop-1] o.s.b.c.w.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured successfully
+2016-10-11 09:55:12.125 DEBUG 6996 --- [ost-startStop-1] .s.BootGlobalAuthenticationConfiguration : Eagerly initializing {start=org.eclipse.hawkbit.app.Start$$EnhancerBySpringCGLIB$$95a2da78@1ea689e4}
+2016-10-11 09:55:12.435  INFO 6996 --- [ost-startStop-1] o.e.h.a.s.SecurityManagedConfiguration   : ******************
+** Anonymous controller security enabled, should only be used for developing purposes **
+******************
+2016-10-11 09:55:12.478  INFO 6996 --- [ost-startStop-1] o.e.h.a.s.SecurityManagedConfiguration   : "******************\n** Requires HTTPS Security has been disabled for UI, should only be used for developing purposes **\n******************"
+2016-10-11 09:55:12.491  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/documentation/**'], []
+2016-10-11 09:55:12.491  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/VAADIN/**'], []
+2016-10-11 09:55:12.491  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.*'], []
+2016-10-11 09:55:12.491  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/api-docs/**'], []
+2016-10-11 09:55:12.491  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/docs/**'], []
+2016-10-11 09:55:12.646  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.RegexRequestMatcher@4e95192c, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d50a17f, org.springframework.security.web.context.SecurityContextPersistenceFilter@611130c6, org.springframework.security.web.header.HeaderWriterFilter@56342138, org.springframework.security.web.authentication.logout.LogoutFilter@52f6905e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3731805b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fb1b437, org.springframework.security.web.session.SessionManagementFilter@32ffadd1, org.springframework.security.web.access.ExceptionTranslationFilter@3308d218, org.eclipse.hawkbit.security.HttpDownloadAuthenticationFilter@10f2b0a9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47d5b239]
+2016-10-11 09:55:12.662  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/*/controller/v1/**'], Ant [pattern='/*/controller/artifacts/v1/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37332636, org.springframework.security.web.header.HeaderWriterFilter@603411aa, org.springframework.security.web.authentication.logout.LogoutFilter@f4fe45c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79ca3d89, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f361551, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fbd732c, org.springframework.security.web.session.SessionManagementFilter@7d78b794, org.springframework.security.web.access.ExceptionTranslationFilter@2a69d9c]
+2016-10-11 09:55:12.696  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.RegexRequestMatcher@20ed82d0, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54c4688d, org.springframework.security.web.context.SecurityContextPersistenceFilter@794809d, org.springframework.security.web.header.HeaderWriterFilter@167de0b4, org.springframework.security.web.authentication.logout.LogoutFilter@38860ad6, org.eclipse.hawkbit.autoconfigure.security.SecurityManagedConfiguration$RestSecurityConfigurationAdapter$1@52b3335a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1fe94665, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@691e19cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@109f3c18, org.springframework.security.web.session.SessionManagementFilter@2436c8f8, org.eclipse.hawkbit.autoconfigure.security.AuthenticationSuccessTenantMetadataCreationFilter@7bc9d07, org.springframework.security.web.access.ExceptionTranslationFilter@3eca05cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3036d8ef]
+2016-10-11 09:55:12.706  INFO 6996 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.RegexRequestMatcher@5b785c1e, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43fe20e6, org.springframework.security.web.context.SecurityContextPersistenceFilter@59457ed8, org.springframework.security.web.header.HeaderWriterFilter@413936a, org.springframework.security.web.authentication.logout.LogoutFilter@106f850a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34ba65e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1bdbed9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16b5ea42, org.springframework.security.web.session.SessionManagementFilter@5f5a8cbb, org.springframework.security.web.access.ExceptionTranslationFilter@1429dfb9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@738bed25]
+2016-10-11 09:55:14.681  INFO 6996 --- [           main] c.v.spring.navigator.SpringViewProvider  : Looking up SpringViews
+2016-10-11 09:55:14.706  INFO 6996 --- [           main] c.v.spring.navigator.SpringViewProvider  : 7 SpringViews found
+2016-10-11 09:55:15.008  WARN 6996 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Neither 'urlMap' nor 'mappings' set on SimpleUrlHandlerMapping
+2016-10-11 09:55:15.019  INFO 6996 --- [           main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+2016-10-11 09:55:15.585  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a7a0cd6: startup date [Tue Oct 11 09:54:46 CEST 2016]; root of context hierarchy
+2016-10-11 09:55:15.973  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/metadata],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.getMetadata(java.lang.Long,int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:15.977  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/metadata],methods=[POST],consumes=[application/json || application/hal+json],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.createMetadata(java.lang.Long,java.util.List<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata>)
+2016-10-11 09:55:15.978  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/metadata/{metadataKey}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.getMetadataValue(java.lang.Long,java.lang.String)
+2016-10-11 09:55:15.978  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/assignedTargets],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.getAssignedTargets(java.lang.Long,int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:15.979  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSet> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.getDistributionSet(java.lang.Long)
+2016-10-11 09:55:15.980  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/metadata/{metadataKey}],methods=[PUT],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.updateMetadata(java.lang.Long,java.lang.String,org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata)
+2016-10-11 09:55:15.981  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/metadata/{metadataKey}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.deleteMetadata(java.lang.Long,java.lang.String)
+2016-10-11 09:55:15.981  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSet>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.getDistributionSets(int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:15.982  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/installedTargets],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.getInstalledTargets(java.lang.Long,int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:15.982  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/assignedTargets],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtTargetAssignmentResponseBody> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.createAssignedTarget(java.lang.Long,java.util.List<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtTargetAssignmentRequestBody>)
+2016-10-11 09:55:15.983  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/assignedSM/{softwareModuleId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.deleteAssignSoftwareModules(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:15.983  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/assignedSM],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.softwaremodule.MgmtSoftwareModule>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.getAssignedSoftwareModules(java.lang.Long,int,int,java.lang.String)
+2016-10-11 09:55:15.984  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}/assignedSM],methods=[POST],consumes=[application/json || application/hal+json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.assignSoftwareModules(java.lang.Long,java.util.List<org.eclipse.hawkbit.mgmt.json.model.softwaremodule.MgmtSoftwareModuleAssigment>)
+2016-10-11 09:55:15.985  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets],methods=[POST],consumes=[application/json || application/hal+json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSet>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.createDistributionSets(java.util.List<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSetRequestBodyPost>)
+2016-10-11 09:55:15.986  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.deleteDistributionSet(java.lang.Long)
+2016-10-11 09:55:15.986  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsets/{distributionSetId}],methods=[PUT],consumes=[application/hal+json || application/json],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSet> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetResource.updateDistributionSet(java.lang.Long,org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSetRequestBodyPut)
+2016-10-11 09:55:15.993  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags/{distributionsetTagId}],methods=[PUT],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTag> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.updateDistributionSetTag(java.lang.Long,org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTagRequestBodyPut)
+2016-10-11 09:55:15.993  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags/{distributionsetTagId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTag> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.getDistributionSetTag(java.lang.Long)
+2016-10-11 09:55:15.994  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTag>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.getDistributionSetTags(int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:15.994  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags/{distributionsetTagId}/distributionsets],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSet>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.getAssignedDistributionSets(java.lang.Long)
+2016-10-11 09:55:15.994  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags/{distributionsetTagId}/distributionsets],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSet>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.assignDistributionSets(java.lang.Long,java.util.List<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtAssignedDistributionSetRequestBody>)
+2016-10-11 09:55:16.002  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags/{distributionsetTagId}/distributionsets],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.unassignDistributionSets(java.lang.Long)
+2016-10-11 09:55:16.003  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags/{distributionsetTagId}/distributionsets/{distributionsetId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.unassignDistributionSet(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.003  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags/{distributionsetTagId}/distributionsets/toggleTagAssignment],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtDistributionSetTagAssigmentResult> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.toggleTagAssignment(java.lang.Long,java.util.List<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtAssignedDistributionSetRequestBody>)
+2016-10-11 09:55:16.003  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTag>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.createDistributionSetTags(java.util.List<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTagRequestBodyPut>)
+2016-10-11 09:55:16.004  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettags/{distributionsetTagId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTagResource.deleteDistributionSetTag(java.lang.Long)
+2016-10-11 09:55:16.012  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.distributionsettype.MgmtDistributionSetType>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.getDistributionSetTypes(int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.012  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.distributionsettype.MgmtDistributionSetType> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.getDistributionSetType(java.lang.Long)
+2016-10-11 09:55:16.013  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}/mandatorymoduletypes],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleType>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.getMandatoryModules(java.lang.Long)
+2016-10-11 09:55:16.013  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}/mandatorymoduletypes/{softwareModuleTypeId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleType> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.getMandatoryModule(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.014  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}/optionalmoduletypes/{softwareModuleTypeId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleType> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.getOptionalModule(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.014  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}/optionalmoduletypes],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleType>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.getOptionalModules(java.lang.Long)
+2016-10-11 09:55:16.014  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}/mandatorymoduletypes/{softwareModuleTypeId}],methods=[DELETE],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.removeMandatoryModule(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.015  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}/optionalmoduletypes/{softwareModuleTypeId}],methods=[DELETE],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.removeOptionalModule(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.015  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}/mandatorymoduletypes],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.addMandatoryModule(java.lang.Long,org.eclipse.hawkbit.mgmt.json.model.MgmtId)
+2016-10-11 09:55:16.016  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}/optionalmoduletypes],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.addOptionalModule(java.lang.Long,org.eclipse.hawkbit.mgmt.json.model.MgmtId)
+2016-10-11 09:55:16.016  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.distributionsettype.MgmtDistributionSetType>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.createDistributionSetTypes(java.util.List<org.eclipse.hawkbit.mgmt.json.model.distributionsettype.MgmtDistributionSetTypeRequestBodyPost>)
+2016-10-11 09:55:16.016  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.deleteDistributionSetType(java.lang.Long)
+2016-10-11 09:55:16.017  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/distributionsettypes/{distributionSetTypeId}],methods=[PUT],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.distributionsettype.MgmtDistributionSetType> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDistributionSetTypeResource.updateDistributionSetType(java.lang.Long,org.eclipse.hawkbit.mgmt.json.model.distributionsettype.MgmtDistributionSetTypeRequestBodyPut)
+2016-10-11 09:55:16.019  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/artifacts/{artifactId}/download],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.io.InputStream> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDownloadArtifactResource.downloadArtifact(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.021  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/downloadserver/downloadId/{downloadId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtDownloadResource.downloadArtifactByDownloadId(java.lang.String)
+2016-10-11 09:55:16.026  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts/{rolloutId}/start],methods=[POST],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.start(java.lang.Long,boolean)
+2016-10-11 09:55:16.026  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.rollout.MgmtRolloutResponseBody> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.create(org.eclipse.hawkbit.mgmt.json.model.rollout.MgmtRolloutRestRequestBody)
+2016-10-11 09:55:16.027  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts/{rolloutId}/resume],methods=[POST],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.resume(java.lang.Long)
+2016-10-11 09:55:16.027  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts/{rolloutId}/deploygroups],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.rolloutgroup.MgmtRolloutGroupResponseBody>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.getRolloutGroups(java.lang.Long,int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.027  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts/{rolloutId}],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.rollout.MgmtRolloutResponseBody> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.getRollout(java.lang.Long)
+2016-10-11 09:55:16.027  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts/{rolloutId}/deploygroups/{groupId}],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.rolloutgroup.MgmtRolloutGroupResponseBody> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.getRolloutGroup(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.028  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts/{rolloutId}/pause],methods=[POST],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.pause(java.lang.Long)
+2016-10-11 09:55:16.028  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.rollout.MgmtRolloutResponseBody>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.getRollouts(int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.028  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/rollouts/{rolloutId}/deploygroups/{groupId}/targets],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtRolloutResource.getRolloutGroupTargets(java.lang.Long,java.lang.Long,int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.035  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/artifacts/{artifactId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.artifact.MgmtArtifact> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.getArtifact(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.035  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/metadata],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.getMetadata(java.lang.Long,int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.036  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/artifacts],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.artifact.MgmtArtifact>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.getArtifacts(java.lang.Long)
+2016-10-11 09:55:16.036  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/metadata],methods=[POST],consumes=[application/json || application/hal+json],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.createMetadata(java.lang.Long,java.util.List<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata>)
+2016-10-11 09:55:16.036  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/metadata/{metadataKey}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.getMetadataValue(java.lang.Long,java.lang.String)
+2016-10-11 09:55:16.037  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/artifacts/{artifactId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.deleteArtifact(java.lang.Long,java.lang.Long)
+2016-10-11 09:55:16.037  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/artifacts],methods=[POST],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.artifact.MgmtArtifact> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.uploadArtifact(java.lang.Long,org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.037  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/metadata/{metadataKey}],methods=[PUT],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.updateMetadata(java.lang.Long,java.lang.String,org.eclipse.hawkbit.mgmt.json.model.MgmtMetadata)
+2016-10-11 09:55:16.037  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}/metadata/{metadataKey}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.deleteMetadata(java.lang.Long,java.lang.String)
+2016-10-11 09:55:16.038  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.softwaremodule.MgmtSoftwareModule> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.getSoftwareModule(java.lang.Long)
+2016-10-11 09:55:16.038  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.softwaremodule.MgmtSoftwareModule>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.getSoftwareModules(int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.038  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.softwaremodule.MgmtSoftwareModule>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.createSoftwareModules(java.util.List<org.eclipse.hawkbit.mgmt.json.model.softwaremodule.MgmtSoftwareModuleRequestBodyPost>)
+2016-10-11 09:55:16.038  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.deleteSoftwareModule(java.lang.Long)
+2016-10-11 09:55:16.039  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremodules/{softwareModuleId}],methods=[PUT],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.softwaremodule.MgmtSoftwareModule> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleResource.updateSoftwareModule(java.lang.Long,org.eclipse.hawkbit.mgmt.json.model.softwaremodule.MgmtSoftwareModuleRequestBodyPut)
+2016-10-11 09:55:16.042  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremoduletypes/{softwareModuleTypeId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleType> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleTypeResource.getSoftwareModuleType(java.lang.Long)
+2016-10-11 09:55:16.042  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremoduletypes],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleType>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleTypeResource.getTypes(int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.043  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremoduletypes],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleType>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleTypeResource.createSoftwareModuleTypes(java.util.List<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleTypeRequestBodyPost>)
+2016-10-11 09:55:16.043  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremoduletypes/{softwareModuleTypeId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleTypeResource.deleteSoftwareModuleType(java.lang.Long)
+2016-10-11 09:55:16.043  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/softwaremoduletypes/{softwareModuleTypeId}],methods=[PUT],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleType> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSoftwareModuleTypeResource.updateSoftwareModuleType(java.lang.Long,org.eclipse.hawkbit.mgmt.json.model.softwaremoduletype.MgmtSoftwareModuleTypeRequestBodyPut)
+2016-10-11 09:55:16.045  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/system/admin/caches],methods=[DELETE]}" onto public abstract org.springframework.http.ResponseEntity<java.util.Collection<java.lang.String>> org.eclipse.hawkbit.mgmt.rest.api.MgmtSystemManagementRestApi.invalidateCaches()
+2016-10-11 09:55:16.045  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/system/admin/caches],methods=[GET]}" onto public abstract org.springframework.http.ResponseEntity<java.util.Collection<org.eclipse.hawkbit.mgmt.json.model.systemmanagement.MgmtSystemCache>> org.eclipse.hawkbit.mgmt.rest.api.MgmtSystemManagementRestApi.getCaches()
+2016-10-11 09:55:16.045  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/system/admin/tenants/{tenant}],methods=[DELETE]}" onto public abstract org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.api.MgmtSystemManagementRestApi.deleteTenant(java.lang.String)
+2016-10-11 09:55:16.045  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/system/admin/usage],methods=[GET],produces=[application/hal+json || application/json]}" onto public abstract org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.systemmanagement.MgmtSystemStatisticsRest> org.eclipse.hawkbit.mgmt.rest.api.MgmtSystemManagementRestApi.getSystemUsageStats()
+2016-10-11 09:55:16.048  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/system],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSystemResource.getSystem()
+2016-10-11 09:55:16.048  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/system/configs],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, org.eclipse.hawkbit.mgmt.json.model.system.MgmtSystemTenantConfigurationValue>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSystemResource.getSystemConfiguration()
+2016-10-11 09:55:16.049  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/system/configs/{keyName}],methods=[DELETE],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSystemResource.deleteConfigurationValue(java.lang.String)
+2016-10-11 09:55:16.049  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/system/configs/{keyName}],methods=[PUT],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.system.MgmtSystemTenantConfigurationValue> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSystemResource.updateConfigurationValue(java.lang.String,org.eclipse.hawkbit.mgmt.json.model.system.MgmtSystemTenantConfigurationValueRequest)
+2016-10-11 09:55:16.049  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/system/configs/{keyName}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.system.MgmtSystemTenantConfigurationValue> org.eclipse.hawkbit.mgmt.rest.resource.MgmtSystemResource.getConfigurationValue(java.lang.String)
+2016-10-11 09:55:16.055  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.getTarget(java.lang.String)
+2016-10-11 09:55:16.055  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}/attributes],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTargetAttributes> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.getAttributes(java.lang.String)
+2016-10-11 09:55:16.055  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.getTargets(int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.056  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}],methods=[DELETE],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.deleteTarget(java.lang.String)
+2016-10-11 09:55:16.056  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}/actions],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.action.MgmtAction>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.getActionHistory(java.lang.String,int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.056  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}/actions/{actionId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.cancelAction(java.lang.String,java.lang.Long,boolean)
+2016-10-11 09:55:16.057  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.createTargets(java.util.List<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTargetRequestBody>)
+2016-10-11 09:55:16.057  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}],methods=[PUT],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.updateTarget(java.lang.String,org.eclipse.hawkbit.mgmt.json.model.target.MgmtTargetRequestBody)
+2016-10-11 09:55:16.057  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}/actions/{actionId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.action.MgmtAction> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.getAction(java.lang.String,java.lang.Long)
+2016-10-11 09:55:16.057  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}/assignedDS],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.postAssignedDistributionSet(java.lang.String,org.eclipse.hawkbit.mgmt.json.model.target.MgmtDistributionSetAssigment)
+2016-10-11 09:55:16.058  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}/assignedDS],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSet> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.getAssignedDistributionSet(java.lang.String)
+2016-10-11 09:55:16.058  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}/installedDS],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtDistributionSet> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.getInstalledDistributionSet(java.lang.String)
+2016-10-11 09:55:16.058  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targets/{controllerId}/actions/{actionId}/status],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.action.MgmtActionStatus>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetResource.getActionStatusList(java.lang.String,java.lang.Long,int,int,java.lang.String)
+2016-10-11 09:55:16.062  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags/{targetTagId}],methods=[PUT],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTag> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.updateTagretTag(java.lang.Long,org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTagRequestBodyPut)
+2016-10-11 09:55:16.063  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags/{targetTagId}/targets],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.unassignTargets(java.lang.Long)
+2016-10-11 09:55:16.063  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags/{targetTagId}/targets/{controllerId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.unassignTarget(java.lang.Long,java.lang.String)
+2016-10-11 09:55:16.063  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags/{targetTagId}/targets],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.assignTargets(java.lang.Long,java.util.List<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtAssignedTargetRequestBody>)
+2016-10-11 09:55:16.064  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags],methods=[POST],consumes=[application/hal+json || application/json],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTag>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.createTargetTags(java.util.List<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTagRequestBodyPut>)
+2016-10-11 09:55:16.064  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags/{targetTagId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.deleteTargetTag(java.lang.Long)
+2016-10-11 09:55:16.064  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags/{targetTagId}/targets],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.mgmt.json.model.target.MgmtTarget>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.getAssignedTargets(java.lang.Long)
+2016-10-11 09:55:16.065  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags/{targetTagId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTag> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.getTargetTag(java.lang.Long)
+2016-10-11 09:55:16.065  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.PagedList<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTag>> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.getTargetTags(int,int,java.lang.String,java.lang.String)
+2016-10-11 09:55:16.065  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rest/v1/targettags/{targetTagId}/targets/toggleTagAssignment],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtTargetTagAssigmentResult> org.eclipse.hawkbit.mgmt.rest.resource.MgmtTargetTagResource.toggleTagAssignment(java.lang.Long,java.util.List<org.eclipse.hawkbit.mgmt.json.model.tag.MgmtAssignedTargetRequestBody>)
+2016-10-11 09:55:16.067  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/artifacts/v1/filename/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.io.InputStream> org.eclipse.hawkbit.ddi.rest.resource.DdiArtifactStoreController.downloadArtifactByFilename(java.lang.String,java.lang.String)
+2016-10-11 09:55:16.068  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/artifacts/v1/filename/{fileName}.MD5SUM],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.ddi.rest.resource.DdiArtifactStoreController.downloadArtifactMD5ByFilename(java.lang.String)
+2016-10-11 09:55:16.077  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}/deploymentBase/{actionId}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.ddi.json.model.DdiDeploymentBase> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.getControllerBasedeploymentAction(java.lang.String,java.lang.Long,int)
+2016-10-11 09:55:16.078  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}/softwaremodules/{softwareModuleId}/artifacts/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.io.InputStream> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.downloadArtifact(java.lang.String,java.lang.Long,java.lang.String)
+2016-10-11 09:55:16.078  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}/configData],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.putConfigData(org.eclipse.hawkbit.ddi.json.model.DdiConfigData,java.lang.String)
+2016-10-11 09:55:16.080  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}/softwaremodules/{softwareModuleId}/artifacts],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<org.eclipse.hawkbit.ddi.json.model.DdiArtifact>> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.getSoftwareModulesArtifacts(java.lang.String,java.lang.Long)
+2016-10-11 09:55:16.081  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.ddi.json.model.DdiControllerBase> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.getControllerBase(java.lang.String)
+2016-10-11 09:55:16.082  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}/softwaremodules/{softwareModuleId}/artifacts/{fileName}.MD5SUM],methods=[GET],produces=[text/plain]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.downloadArtifactMd5(java.lang.String,java.lang.Long,java.lang.String)
+2016-10-11 09:55:16.082  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}/deploymentBase/{actionId}/feedback],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.postBasedeploymentActionFeedback(org.eclipse.hawkbit.ddi.json.model.DdiActionFeedback,java.lang.String,java.lang.Long)
+2016-10-11 09:55:16.083  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}/cancelAction/{actionId}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.eclipse.hawkbit.ddi.json.model.DdiCancel> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.getControllerCancelAction(java.lang.String,java.lang.Long)
+2016-10-11 09:55:16.084  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{tenant}/controller/v1/{targetid}/cancelAction/{actionId}/feedback],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.eclipse.hawkbit.ddi.rest.resource.DdiRootController.postCancelActionFeedback(org.eclipse.hawkbit.ddi.json.model.DdiActionFeedback,java.lang.String,java.lang.Long)
+2016-10-11 09:55:16.088  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-10-11 09:55:16.088  INFO 6996 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-10-11 09:55:16.210  INFO 6996 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-11 09:55:16.210  INFO 6996 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-11 09:55:16.280  INFO 6996 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in responseExceptionHandler
+2016-10-11 09:55:16.372  INFO 6996 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-11 09:55:19.733  INFO 6996 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-10-11 09:55:19.763  INFO 6996 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2016-10-11 09:55:19.772  INFO 6996 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2016-10-11 09:55:19.863 DEBUG 6996 --- [           main] ationConfigEmbeddedWebApplicationContext : Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@2df86bf]
+2016-10-11 09:55:19.870  INFO 6996 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147482648
+2016-10-11 09:55:19.871  INFO 6996 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-10-11 09:55:20.016  INFO 6996 --- [cTaskExecutor-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: SimpleConnection@54f20407 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 57429]
+2016-10-11 09:55:20.022  INFO 6996 --- [cTaskExecutor-1] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable or auto-delete Exchange (authentication.exchange) durable:false, auto-delete:true. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+2016-10-11 09:55:20.022  INFO 6996 --- [cTaskExecutor-1] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (authentication_receiver) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2016-10-11 09:55:20.208 DEBUG 6996 --- [           main] utoConfigurationReportLoggingInitializer : 
+
+
+=========================
+AUTO-CONFIGURATION REPORT
+=========================
+
+
+Positive matches:
+-----------------
+
+   AmqpAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.eclipse.hawkbit.amqp.AmqpConfiguration (OnClassCondition)
+
+   AmqpAutoConfiguration#errorHandler matched
+      - @ConditionalOnMissingBean (types: org.springframework.util.ErrorHandler; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   AmqpConfiguration#amqpSenderServiceBean matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.amqp.AmqpSenderService; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   AmqpConfiguration.RabbitConnectionFactoryCreator matched
+      - @ConditionalOnMissingBean (types: org.springframework.amqp.rabbit.connection.ConnectionFactory; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   AopAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.context.annotation.EnableAspectJAutoProxy,org.aspectj.lang.annotation.Aspect,org.aspectj.lang.reflect.Advice (OnClassCondition)
+      - matched (OnPropertyCondition)
+
+   AopAutoConfiguration.JdkDynamicAutoProxyConfiguration matched
+      - matched (OnPropertyCondition)
+
+   ArtifactStoreAutoConfiguration matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.artifact.repository.ArtifactRepository; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   BootGlobalAuthenticationConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter (OnClassCondition)
+
+   CacheAutoConfiguration#cacheManager matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.cache.TenancyCacheManager,org.springframework.cache.CacheManager,org.springframework.cache.CacheManager; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   CacheAutoConfiguration#directCacheManager matched
+      - @ConditionalOnMissingBean (names: directCacheManager; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration matched
+      - @ConditionalOnClass classes found: javax.sql.DataSource,org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType (OnClassCondition)
+
+   DataSourceAutoConfiguration.DataSourceInitializerConfiguration matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.JdbcTemplateConfiguration matched
+      - existing auto database detected (DataSourceAutoConfiguration.DataSourceAvailableCondition)
+
+   DataSourceAutoConfiguration.JdbcTemplateConfiguration#jdbcTemplate matched
+      - @ConditionalOnMissingBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.JdbcTemplateConfiguration#namedParameterJdbcTemplate matched
+      - @ConditionalOnMissingBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.NonEmbeddedConfiguration matched
+      - supported DataSource class found (DataSourceAutoConfiguration.NonEmbeddedDataSourceCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource,javax.sql.XADataSource; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration matched
+      - @ConditionalOnClass classes found: org.apache.tomcat.jdbc.pool.DataSource (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.jdbc.core.JdbcTemplate,org.springframework.transaction.PlatformTransactionManager (OnClassCondition)
+
+   DispatcherServletAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.web.servlet.DispatcherServlet (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletConfiguration matched
+      - @ConditionalOnClass classes found: javax.servlet.ServletRegistration (OnClassCondition)
+      - no ServletRegistrationBean found (DispatcherServletAutoConfiguration.DefaultDispatcherServletCondition)
+      - one or more ServletRegistrationBeans is found and none is named dispatcherServletRegistration (DispatcherServletAutoConfiguration.DefaultDispatcherServletCondition)
+
+   EmbeddedServletContainerAutoConfiguration matched
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+
+   EmbeddedServletContainerAutoConfiguration.EmbeddedTomcat matched
+      - @ConditionalOnClass classes found: javax.servlet.Servlet,org.apache.catalina.startup.Tomcat (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.context.embedded.EmbeddedServletContainerFactory; SearchStrategy: current) found no beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration matched
+      - @ConditionalOnClass classes found: javax.servlet.Servlet,org.springframework.web.servlet.DispatcherServlet (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+
+   ErrorMvcAutoConfiguration#basicErrorController matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.ErrorController; SearchStrategy: current) found no beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration#errorAttributes matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.ErrorAttributes; SearchStrategy: current) found no beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched
+      - No error template view detected (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+      - matched (OnPropertyCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched
+      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   EventBusAutoConfiguration#eventBus matched
+      - @ConditionalOnMissingBean (types: com.google.common.eventbus.EventBus; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   EventBusAutoConfiguration#eventBusSubscriberProcessor matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.eventbus.EventBusSubscriberProcessor; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   ExecutorAutoConfiguration#asyncExecutor matched
+      - @ConditionalOnMissingBean (types: java.util.concurrent.ExecutorService; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   ExecutorAutoConfiguration#scheduledExecutorService matched
+      - @ConditionalOnMissingBean (types: java.util.concurrent.ScheduledExecutorService; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   ExecutorAutoConfiguration#taskExecutor matched
+      - @ConditionalOnMissingBean (types: org.springframework.core.task.TaskExecutor; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   ExecutorAutoConfiguration#taskScheduler matched
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.TaskScheduler; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   ExecutorAutoConfiguration#uiExecutor matched
+      - @ConditionalOnMissingBean (names: uiExecutor; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   FlywayAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.flywaydb.core.Flyway (OnClassCondition)
+      - matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found the following [dataSource] (OnBeanCondition)
+
+   FlywayAutoConfiguration.FlywayConfiguration matched
+      - @ConditionalOnMissingBean (types: org.flywaydb.core.Flyway; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   FlywayAutoConfiguration.FlywayConfiguration#flywayInitializer matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   FlywayAutoConfiguration.FlywayConfiguration.FlywayInitializerJpaDependencyConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean; SearchStrategy: all) found the following [&entityManagerFactory] (OnBeanCondition)
+
+   FlywayAutoConfiguration.FlywayJpaDependencyConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean; SearchStrategy: all) found the following [&entityManagerFactory] (OnBeanCondition)
+
+   GenericCacheConfiguration matched
+      - Automatic cache type (CacheCondition)
+
+   GuavaCacheConfiguration matched
+      - @ConditionalOnClass classes found: com.google.common.cache.CacheBuilder,org.springframework.cache.guava.GuavaCacheManager (OnClassCondition)
+      - Automatic cache type (CacheCondition)
+
+   HttpEncodingAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.web.filter.CharacterEncodingFilter (OnClassCondition)
+      - matched (OnPropertyCondition)
+
+   HttpEncodingAutoConfiguration#characterEncodingFilter matched
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.http.converter.HttpMessageConverter (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration#messageConverters matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.HttpMessageConverters; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.http.converter.StringHttpMessageConverter (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   HypermediaAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.hateoas.Resource,org.springframework.web.bind.annotation.RequestMapping,org.springframework.plugin.core.Plugin (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+
+   HypermediaHttpMessageConverterConfiguration#halMessageConverterSupportedMediaTypeCustomizer matched
+      - matched (OnPropertyCondition)
+
+   InMemoryUserManagementConfiguration matched
+      - @ConditionalOnMissingBean (types: org.springframework.security.core.userdetails.UserDetailsService; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   InMemoryUserManagementConfiguration#multiTenancyIndicator matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.im.authentication.MultitenancyIndicator; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   InMemoryUserManagementConfiguration#userDetailsService matched
+      - @ConditionalOnMissingBean (types: org.springframework.security.core.userdetails.UserDetailsService; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched
+      - @ConditionalOnClass classes found: com.fasterxml.jackson.databind.ObjectMapper (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched
+      - @ConditionalOnClass classes found: com.fasterxml.jackson.databind.ObjectMapper,org.springframework.http.converter.json.Jackson2ObjectMapperBuilder (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched
+      - @ConditionalOnClass classes found: com.fasterxml.jackson.databind.ObjectMapper,org.springframework.http.converter.json.Jackson2ObjectMapperBuilder (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched
+      - @ConditionalOnClass classes found: com.fasterxml.jackson.databind.ObjectMapper (OnClassCondition)
+      - matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found the following [_halObjectMapper] (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration#mappingJackson2HttpMessageConverter matched
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JmxAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.jmx.export.MBeanExporter (OnClassCondition)
+      - matched (OnPropertyCondition)
+
+   JmxAutoConfiguration#mbeanExporter matched
+      - @ConditionalOnMissingBean (types: org.springframework.jmx.export.MBeanExporter; SearchStrategy: current) found no beans (OnBeanCondition)
+
+   JmxAutoConfiguration#mbeanServer matched
+      - @ConditionalOnMissingBean (types: javax.management.MBeanServer; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JmxAutoConfiguration#objectNamingStrategy matched
+      - @ConditionalOnMissingBean (types: org.springframework.jmx.export.naming.ObjectNamingStrategy; SearchStrategy: current) found no beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactory matched
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,javax.persistence.EntityManagerFactory; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactoryBuilder matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JpaBaseConfiguration#jpaVendorAdapter matched
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.JpaVendorAdapter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JpaBaseConfiguration.JpaWebConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+      - matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor,org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   JpaRepositoryAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.eclipse.hawkbit.EnableJpaRepository (OnClassCondition)
+
+   JtaAutoConfiguration matched
+      - @ConditionalOnClass classes found: javax.transaction.Transaction (OnClassCondition)
+      - matched (OnPropertyCondition)
+
+   MongoAutoConfiguration matched
+      - @ConditionalOnClass classes found: com.mongodb.MongoClient (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.MongoDbFactory; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoAutoConfiguration#mongo matched
+      - @ConditionalOnMissingBean (types: com.mongodb.MongoClient; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoDataAutoConfiguration matched
+      - @ConditionalOnClass classes found: com.mongodb.Mongo,org.springframework.data.mongodb.core.MongoTemplate (OnClassCondition)
+
+   MongoDataAutoConfiguration#gridFsTemplate matched
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.gridfs.GridFsTemplate; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoDataAutoConfiguration#mappingMongoConverter matched
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.core.convert.MongoConverter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoDataAutoConfiguration#mongoDbFactory matched
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.MongoDbFactory; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoDataAutoConfiguration#mongoMappingContext matched
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.core.mapping.MongoMappingContext; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoDataAutoConfiguration#mongoTemplate matched
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.core.MongoTemplate; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MongoRepositoriesAutoConfiguration matched
+      - @ConditionalOnClass classes found: com.mongodb.Mongo,org.springframework.data.mongodb.repository.MongoRepository (OnClassCondition)
+      - matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean,org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MultipartAutoConfiguration matched
+      - @ConditionalOnClass classes found: javax.servlet.Servlet,org.springframework.web.multipart.support.StandardServletMultipartResolver,javax.servlet.MultipartConfigElement (OnClassCondition)
+      - matched (OnPropertyCondition)
+
+   MultipartAutoConfiguration#multipartConfigElement matched
+      - @ConditionalOnMissingBean (types: javax.servlet.MultipartConfigElement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   MultipartAutoConfiguration#multipartResolver matched
+      - @ConditionalOnMissingBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   NoOpCacheConfiguration matched
+      - Automatic cache type (CacheCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor (OnClassCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration#persistenceExceptionTranslationPostProcessor matched
+      - @ConditionalOnMissingBean (types: org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor; SearchStrategy: all) found no beans (OnBeanCondition)
+      - matched (OnPropertyCondition)
+
+   PropertyHostnameResolverAutoConfiguration#hostnameResolver matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.api.HostnameResolver; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched
+      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) found no beans (OnBeanCondition)
+
+   RabbitAnnotationDrivenConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.amqp.rabbit.annotation.EnableRabbit (OnClassCondition)
+
+   RabbitAnnotationDrivenConfiguration#rabbitListenerContainerFactory matched
+      - @ConditionalOnMissingBean (names: rabbitListenerContainerFactory; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RabbitAnnotationDrivenConfiguration#rabbitListenerContainerFactoryConfigurer matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.amqp.SimpleRabbitListenerContainerFactoryConfigurer; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RabbitAnnotationDrivenConfiguration.EnableRabbitConfiguration matched
+      - @ConditionalOnMissingBean (names: org.springframework.amqp.rabbit.config.internalRabbitListenerAnnotationProcessor; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RabbitAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.amqp.rabbit.core.RabbitTemplate,com.rabbitmq.client.Channel (OnClassCondition)
+
+   RabbitAutoConfiguration.MessagingTemplateConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.amqp.rabbit.core.RabbitMessagingTemplate (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.amqp.rabbit.core.RabbitMessagingTemplate; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RedisCacheConfiguration matched
+      - Automatic cache type (CacheCondition)
+
+   RepositoryApplicationConfiguration#artifactManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.ArtifactManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#controllerManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.ControllerManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#deploymentManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.DeploymentManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#distributionSetManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.DistributionSetManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#entityFactory matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.EntityFactory; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#reportManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.ReportManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#rolloutGroupManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.RolloutGroupManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#rolloutManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.RolloutManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#softwareManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.SoftwareManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#systemManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.SystemManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#tagManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.TagManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#targetFilterQueryManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.TargetFilterQueryManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#targetManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.TargetManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#tenantConfigurationManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.TenantConfigurationManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   RepositoryApplicationConfiguration#tenantStatsManagement matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.repository.TenantStatsManagement; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   ResourceControllerAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.eclipse.hawkbit.ddi.EnableDdiApi,org.eclipse.hawkbit.mgmt.EnableMgmtApi (OnClassCondition)
+
+   SecurityAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter (OnClassCondition)
+
+   SecurityAutoConfiguration#auditorAware matched
+      - @ConditionalOnMissingBean (types: org.springframework.data.domain.AuditorAware; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   SecurityAutoConfiguration#authenticationEventPublisher matched
+      - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationEventPublisher; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   SecurityAutoConfiguration#permissionService matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.im.authentication.PermissionService; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   SecurityAutoConfiguration#securityProperties matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.security.SecurityProperties; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   SecurityAutoConfiguration#tenantAware matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.tenancy.TenantAware; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   SecurityFilterAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer,org.springframework.security.config.http.SessionCreationPolicy (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+
+   SecurityFilterAutoConfiguration#securityFilterChainRegistration matched
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found the following [springSecurityFilterChain] (OnBeanCondition)
+
+   SecurityManagedConfiguration#userAuthenticationFilter matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.im.authentication.UserAuthenticationFilter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   ServerPropertiesAutoConfiguration matched
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+
+   ServerPropertiesAutoConfiguration#serverProperties matched
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.ServerProperties; SearchStrategy: current) found no beans (OnBeanCondition)
+
+   SimpleCacheConfiguration matched
+      - Automatic cache type (CacheCondition)
+
+   SpringDataWebAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.data.web.PageableHandlerMethodArgumentResolver,org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.PageableHandlerMethodArgumentResolver; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   TransactionAutoConfiguration matched
+      - @ConditionalOnClass classes found: org.springframework.transaction.support.TransactionTemplate,org.springframework.transaction.PlatformTransactionManager (OnClassCondition)
+      - @ConditionalOnSingleCandidate (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found a primary candidate amongst the following [transactionManager] (OnBeanCondition)
+
+   TransactionAutoConfiguration#transactionTemplate matched
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.support.TransactionTemplate; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   UIAutoConfiguration#eventProvider matched
+      - @ConditionalOnMissingBean (types: org.eclipse.hawkbit.ui.UIEventProvider; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   VaadinAutoConfiguration matched
+      - @ConditionalOnClass classes found: com.vaadin.spring.annotation.SpringUI (OnClassCondition)
+
+   WebMvcAutoConfiguration matched
+      - @ConditionalOnClass classes found: javax.servlet.Servlet,org.springframework.web.servlet.DispatcherServlet,org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter matched
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.HiddenHttpMethodFilter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#httpPutFormContentFilter matched
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.HttpPutFormContentFilter; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found the following [beanNameViewResolver, defaultViewResolver, mvcViewResolver] @ConditionalOnMissingBean (names: viewResolver; types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter.FaviconConfiguration matched
+      - matched (OnPropertyCondition)
+
+   WebSocketAutoConfiguration matched
+      - @ConditionalOnClass classes found: javax.servlet.Servlet,javax.websocket.server.ServerContainer (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+
+   WebSocketAutoConfiguration.TomcatWebSocketConfiguration matched
+      - @ConditionalOnClass classes found: org.apache.catalina.startup.Tomcat,org.apache.tomcat.websocket.server.WsSci (OnClassCondition)
+
+   WebSocketAutoConfiguration.TomcatWebSocketConfiguration#websocketContainerCustomizer matched
+      - Required JVM version 1.7 or newer found 1.8 (OnJavaCondition)
+      - @ConditionalOnMissingBean (names: websocketContainerCustomizer; SearchStrategy: all) found no beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   ActiveMQAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: javax.jms.ConnectionFactory,org.apache.activemq.ActiveMQConnectionFactory (OnClassCondition)
+
+   AopAutoConfiguration.CglibAutoProxyConfiguration did not match
+      - @ConditionalOnProperty missing required properties spring.aop.proxy-target-class (OnPropertyCondition)
+
+   ArtemisAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: javax.jms.ConnectionFactory,org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory (OnClassCondition)
+
+   AsyncConfigurerAutoConfiguration did not match
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) found the following [asyncConfigurerAutoConfiguration] (OnBeanCondition)
+
+   AtomikosJtaConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.atomikos.icatch.jta.UserTransactionManager (OnClassCondition)
+
+   AuthenticationManagerConfiguration did not match
+      - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager; SearchStrategy: all) found the following [authenticationManager] (OnBeanCondition)
+
+   BatchAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.batch.core.launch.JobLauncher (OnClassCondition)
+
+   BitronixJtaConfiguration did not match
+      - required @ConditionalOnClass classes not found: bitronix.tm.jndi.BitronixContext (OnClassCondition)
+
+   CacheAutoConfiguration did not match
+      - @ConditionalOnClass classes found: org.springframework.cache.CacheManager (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.cache.CacheManager,org.springframework.cache.interceptor.CacheResolver; SearchStrategy: all) found the following [cacheManager, directCacheManager] (OnBeanCondition)
+
+   CacheAutoConfiguration.CacheManagerJpaDependencyConfiguration did not match
+      - @ConditionalOnClass classes found: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean (OnClassCondition)
+      - Ancestor 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+
+   CassandraAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.datastax.driver.core.Cluster (OnClassCondition)
+
+   CassandraDataAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.datastax.driver.core.Cluster,org.springframework.data.cassandra.core.CassandraAdminOperations (OnClassCondition)
+
+   CassandraRepositoriesAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.datastax.driver.core.Session,org.springframework.data.cassandra.repository.CassandraRepository (OnClassCondition)
+
+   CloudAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.cloud.config.java.CloudScanConfiguration (OnClassCondition)
+
+   DataSourceAutoConfiguration.EmbeddedConfiguration did not match
+      - existing non-embedded database detected (DataSourceAutoConfiguration.EmbeddedDataSourceCondition)
+
+   DataSourceAutoConfiguration.TomcatDataSourceJmxConfiguration did not match
+      - @ConditionalOnClass classes found: org.apache.tomcat.jdbc.pool.DataSourceProxy (OnClassCondition)
+      - existing auto database detected (DataSourceAutoConfiguration.DataSourceAvailableCondition)
+      - @ConditionalOnProperty missing required properties spring.datasource.jmx-enabled (OnPropertyCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.apache.commons.dbcp2.BasicDataSource (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcpPoolDataSourceMetadataProviderConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.apache.commons.dbcp.BasicDataSource (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.zaxxer.hikari.HikariDataSource (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration#transactionManager did not match
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found the following [transactionManager] (OnBeanCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.TransactionManagementConfiguration did not match
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) found the following [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] (OnBeanCondition)
+
+   DeviceDelegatingViewResolverAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.mobile.device.view.LiteDeviceDelegatingViewResolver (OnClassCondition)
+
+   DeviceResolverAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.mobile.device.DeviceResolverHandlerInterceptor,org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver (OnClassCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletConfiguration#multipartResolver did not match
+      - @ConditionalOnBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) found no beans (OnBeanCondition)
+
+   EhCacheCacheConfiguration did not match
+      - required @ConditionalOnClass classes not found: net.sf.ehcache.Cache (OnClassCondition)
+
+   ElasticsearchAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.elasticsearch.client.Client,org.springframework.data.elasticsearch.client.TransportClientFactoryBean,org.springframework.data.elasticsearch.client.NodeClientFactoryBean (OnClassCondition)
+
+   ElasticsearchDataAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.elasticsearch.client.Client,org.springframework.data.elasticsearch.core.ElasticsearchTemplate (OnClassCondition)
+
+   ElasticsearchRepositoriesAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.elasticsearch.client.Client,org.springframework.data.elasticsearch.repository.ElasticsearchRepository (OnClassCondition)
+
+   EmbeddedMongoAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: de.flapdoodle.embed.mongo.MongodStarter (OnClassCondition)
+
+   EmbeddedServletContainerAutoConfiguration.EmbeddedJetty did not match
+      - required @ConditionalOnClass classes not found: org.eclipse.jetty.server.Server,org.eclipse.jetty.util.Loader,org.eclipse.jetty.webapp.WebAppContext (OnClassCondition)
+
+   EmbeddedServletContainerAutoConfiguration.EmbeddedUndertow did not match
+      - required @ConditionalOnClass classes not found: io.undertow.Undertow,org.xnio.SslClientAuthMode (OnClassCondition)
+
+   FacebookAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.social.config.annotation.SocialConfigurerAdapter,org.springframework.social.facebook.connect.FacebookConnectionFactory (OnClassCondition)
+
+   FallbackWebSecurityAutoConfiguration did not match
+      - @ConditionalOnClass classes found: org.springframework.security.config.annotation.web.configuration.EnableWebSecurity (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnProperty missing required properties security.basic.enabled (OnPropertyCondition)
+
+   FreeMarkerAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: freemarker.template.Configuration (OnClassCondition)
+
+   GroovyTemplateAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: groovy.text.markup.MarkupTemplateEngine (OnClassCondition)
+
+   GsonAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.google.gson.Gson (OnClassCondition)
+
+   GsonHttpMessageConvertersConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.google.gson.Gson (OnClassCondition)
+
+   H2ConsoleAutoConfiguration did not match
+      - @ConditionalOnClass classes found: org.h2.server.web.WebServlet (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnProperty missing required properties spring.h2.console.enabled (OnPropertyCondition)
+
+   HazelcastAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.hazelcast.core.HazelcastInstance (OnClassCondition)
+
+   HazelcastCacheConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.hazelcast.core.HazelcastInstance,com.hazelcast.spring.cache.HazelcastCacheManager (OnClassCondition)
+
+   HazelcastJpaDependencyAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.hazelcast.core.HazelcastInstance (OnClassCondition)
+
+   HibernateJpaAutoConfiguration did not match
+      - @ConditionalOnClass classes found: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,org.springframework.transaction.annotation.EnableTransactionManagement,javax.persistence.EntityManager (OnClassCondition)
+      - did not find HibernateEntityManager class (HibernateJpaAutoConfiguration.HibernateEntityManagerCondition)
+
+   HornetQAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: javax.jms.ConnectionFactory,org.hornetq.api.jms.HornetQJMSClient (OnClassCondition)
+
+   HypermediaAutoConfiguration.EntityLinksConfiguration did not match
+      - @ConditionalOnMissingBean (types: org.springframework.hateoas.EntityLinks; SearchStrategy: all) found the following [delegatingEntityLinks, controllerEntityLinks] (OnBeanCondition)
+
+   HypermediaAutoConfiguration.HypermediaConfiguration did not match
+      - @ConditionalOnMissingBean (types: org.springframework.hateoas.LinkDiscoverers; SearchStrategy: all) found the following [org.springframework.hateoas.LinkDiscoverers#0] (OnBeanCondition)
+
+   InfinispanCacheConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.infinispan.spring.provider.SpringEmbeddedCacheManager (OnClassCondition)
+
+   IntegrationAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.integration.config.EnableIntegration (OnClassCondition)
+
+   JCacheCacheConfiguration did not match
+      - required @ConditionalOnClass classes not found: javax.cache.Caching (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper did not match
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found the following [_halObjectMapper] (OnBeanCondition)
+
+   JacksonAutoConfiguration.JodaDateTimeJacksonConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.joda.time.DateTime,com.fasterxml.jackson.datatype.joda.ser.DateTimeSerializer,com.fasterxml.jackson.datatype.joda.cfg.JacksonJodaDateFormat (OnClassCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.fasterxml.jackson.module.paramnames.ParameterNamesModule (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.fasterxml.jackson.dataformat.xml.XmlMapper (OnClassCondition)
+
+   JerseyAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.glassfish.jersey.server.spring.SpringComponentProvider (OnClassCondition)
+
+   JmsAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.jms.core.JmsTemplate (OnClassCondition)
+
+   JndiConnectionFactoryAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.jms.core.JmsTemplate (OnClassCondition)
+
+   JndiDataSourceAutoConfiguration did not match
+      - @ConditionalOnClass classes found: javax.sql.DataSource,org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType (OnClassCondition)
+      - @ConditionalOnProperty missing required properties spring.datasource.jndi-name (OnPropertyCondition)
+
+   JndiJtaConfiguration did not match
+      - @ConditionalOnClass classes found: org.springframework.transaction.jta.JtaTransactionManager (OnClassCondition)
+      - JNDI environment is not available (OnJndiCondition)
+
+   JooqAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.jooq.DSLContext (OnClassCondition)
+
+   JpaBaseConfiguration#transactionManager did not match
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found the following [transactionManager] (OnBeanCondition)
+
+   JpaRepositoriesAutoConfiguration did not match
+      - @ConditionalOnClass classes found: org.springframework.data.jpa.repository.JpaRepository (OnClassCondition)
+      - matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean,org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension; SearchStrategy: all) found the following [&distributionSetRepository, &distributionSetTagRepository, &softwareModuleMetadataRepository, &actionStatusRepository, &rolloutTargetGroupRepository, &distributionSetTypeRepository, &targetRepository, &distributionSetMetadataRepository, &tenantConfigurationRepository, &externalArtifactRepository, &localArtifactRepository, &actionRepository, &softwareModuleTypeRepository, &targetTagRepository, &rolloutRepository, &softwareModuleRepository, &tenantMetaDataRepository, &externalArtifactProviderRepository, &targetFilterQueryRepository, &rolloutGroupRepository, org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension#0] (OnBeanCondition)
+
+   LinkedInAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.social.config.annotation.SocialConfigurerAdapter,org.springframework.social.linkedin.connect.LinkedInConnectionFactory (OnClassCondition)
+
+   LiquibaseAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: liquibase.integration.spring.SpringLiquibase (OnClassCondition)
+
+   MailSenderAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: javax.mail.internet.MimeMessage (OnClassCondition)
+
+   MailSenderValidatorAutoConfiguration did not match
+      - @ConditionalOnProperty missing required properties spring.mail.test-connection (OnPropertyCondition)
+
+   MessageSourceAutoConfiguration did not match
+      - Bundle found for spring.messages.basename: messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.context.MessageSource; SearchStrategy: current) found the following [messageSource] (OnBeanCondition)
+
+   MustacheAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.samskivert.mustache.Mustache (OnClassCondition)
+
+   OAuth2AutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.security.oauth2.common.OAuth2AccessToken (OnClassCondition)
+
+   RabbitAutoConfiguration#amqpAdmin did not match
+      - matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.amqp.core.AmqpAdmin; SearchStrategy: all) found the following [rabbitAdmin] (OnBeanCondition)
+
+   RabbitAutoConfiguration#rabbitTemplate did not match
+      - @ConditionalOnMissingBean (types: org.springframework.amqp.rabbit.core.RabbitTemplate; SearchStrategy: all) found the following [rabbitTemplate] (OnBeanCondition)
+
+   RabbitAutoConfiguration.RabbitConnectionFactoryCreator did not match
+      - @ConditionalOnMissingBean (types: org.springframework.amqp.rabbit.connection.ConnectionFactory; SearchStrategy: all) found the following [rabbitConnectionFactory] (OnBeanCondition)
+
+   ReactorAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: reactor.spring.context.config.EnableReactor,reactor.Environment (OnClassCondition)
+
+   RedisAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.data.redis.connection.jedis.JedisConnection,org.springframework.data.redis.core.RedisOperations,redis.clients.jedis.Jedis (OnClassCondition)
+
+   RepositoryRestMvcAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration (OnClassCondition)
+
+   SecurityDataConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.security.data.repository.query.SecurityEvaluationContextExtension (OnClassCondition)
+
+   SecurityFilterAutoConfiguration#securityProperties did not match
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.security.SecurityProperties; SearchStrategy: all) found the following [securityProperties] (OnBeanCondition)
+
+   SendGridAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: com.sendgrid.SendGrid (OnClassCondition)
+
+   SessionAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.session.Session (OnClassCondition)
+
+   SitePreferenceAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor,org.springframework.mobile.device.site.SitePreferenceHandlerMethodArgumentResolver (OnClassCondition)
+
+   SocialWebAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.social.connect.web.ConnectController,org.springframework.social.config.annotation.SocialConfigurerAdapter (OnClassCondition)
+
+   SolrAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.apache.solr.client.solrj.impl.HttpSolrServer,org.apache.solr.client.solrj.impl.CloudSolrServer,org.apache.solr.common.cloud.HashPartitioner (OnClassCondition)
+
+   SolrRepositoriesAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.apache.solr.client.solrj.SolrServer,org.springframework.data.solr.repository.SolrRepository (OnClassCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration did not match
+      - @ConditionalOnProperty missing required properties spring.application.admin.enabled (OnPropertyCondition)
+
+   SpringBootWebSecurityConfiguration did not match
+      - @ConditionalOnClass classes found: org.springframework.security.config.annotation.web.configuration.EnableWebSecurity,org.springframework.security.web.AuthenticationEntryPoint (OnClassCondition)
+      - found web application StandardServletEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration; SearchStrategy: all) found the following [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration] (OnBeanCondition)
+
+   SpringBootWebSecurityConfiguration.ApplicationNoWebSecurityConfigurerAdapter did not match
+      - @ConditionalOnProperty missing required properties security.basic.enabled (OnPropertyCondition)
+      - Ancestor 'org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration' did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+
+   SpringBootWebSecurityConfiguration.ApplicationWebSecurityConfigurerAdapter did not match
+      - matched (OnPropertyCondition)
+      - Ancestor 'org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration' did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+
+   ThymeleafAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.thymeleaf.spring4.SpringTemplateEngine (OnClassCondition)
+
+   TwitterAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.social.config.annotation.SocialConfigurerAdapter,org.springframework.social.twitter.connect.TwitterConnectionFactory (OnClassCondition)
+
+   VaadinServletConfiguration#vaadinServlet did not match
+      - @ConditionalOnMissingBean (types: com.vaadin.server.VaadinServlet; SearchStrategy: all) found no beans (OnBeanCondition)
+      - @ConditionalOnMissingBean (types: com.vaadin.server.VaadinServlet; SearchStrategy: all) found the following [vaadinServlet] (OnBeanCondition)
+
+   VelocityAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.apache.velocity.app.VelocityEngine (OnClassCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration did not match
+      - Webjars locator (org.webjars.WebJarAssetLocator) is absent (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver did not match
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found the following [beanNameViewResolver] (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#dateFormatter did not match
+      - @ConditionalOnProperty missing required properties spring.mvc.date-format (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#localeResolver did not match
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.LocaleResolver; SearchStrategy: all) found no beans (OnBeanCondition)
+      - @ConditionalOnProperty missing required properties spring.mvc.locale (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter did not match
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) found the following [requestContextListener] (OnBeanCondition)
+
+   WebSocketAutoConfiguration.JettyWebSocketConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer (OnClassCondition)
+
+   WebSocketAutoConfiguration.UndertowWebSocketConfiguration did not match
+      - required @ConditionalOnClass classes not found: io.undertow.websockets.jsr.Bootstrap (OnClassCondition)
+
+   WebSocketMessagingAutoConfiguration did not match
+      - required @ConditionalOnClass classes not found: org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer (OnClassCondition)
+
+   XADataSourceAutoConfiguration did not match
+      - @ConditionalOnClass classes found: javax.sql.DataSource,javax.transaction.TransactionManager,org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.boot.jta.XADataSourceWrapper; SearchStrategy: all) found no beans (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+   org.eclipse.hawkbit.autoconfigure.security.SecurityAutoConfiguration
+
+   org.eclipse.hawkbit.autoconfigure.scheduling.ExecutorAutoConfiguration
+
+   org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+
+   org.eclipse.hawkbit.autoconfigure.web.WebMvcAutoConfiguration
+
+   org.eclipse.hawkbit.autoconfigure.eventbus.EventBusAutoConfiguration
+
+   org.eclipse.hawkbit.autoconfigure.conf.DefaultPropertiesAutoConfiguration
+
+   org.eclipse.hawkbit.autoconfigure.cache.DownloadIdCacheAutoConfiguration
+
+   org.eclipse.hawkbit.autoconfigure.ui.UIAutoConfiguration
+
+   org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+
+   org.eclipse.hawkbit.autoconfigure.cache.CacheAutoConfiguration
+
+   org.eclipse.hawkbit.autoconfigure.url.PropertyHostnameResolverAutoConfiguration
+
+
+
+2016-10-11 09:55:20.410  INFO 6996 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-10-11 09:55:20.427  INFO 6996 --- [           main] org.eclipse.hawkbit.app.Start            : Started Start in 34.58 seconds (JVM running for 46.469)
+2016-10-11 09:55:50.313  INFO 6996 --- [executor-pool-0] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 09:56:20.320  INFO 6996 --- [executor-pool-1] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 09:56:50.327  INFO 6996 --- [executor-pool-1] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 09:57:20.332  INFO 6996 --- [executor-pool-2] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 09:57:50.339  INFO 6996 --- [executor-pool-2] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 09:58:20.345  INFO 6996 --- [executor-pool-1] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 09:58:50.352  INFO 6996 --- [executor-pool-1] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 09:59:20.361  INFO 6996 --- [executor-pool-2] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 09:59:50.367  INFO 6996 --- [executor-pool-1] o.e.h.r.jpa.rollout.RolloutScheduler     : Checking rollouts for 0 tenants
+2016-10-11 10:00:06.154  INFO 6996 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a7a0cd6: startup date [Tue Oct 11 09:54:46 CEST 2016]; root of context hierarchy
+2016-10-11 10:00:06.162  INFO 6996 --- [       Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-10-11 10:00:06.174  INFO 6996 --- [       Thread-3] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2016-10-11 10:00:06.333  INFO 6996 --- [       Thread-3] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2016-10-11 10:00:06.341  INFO 6996 --- [       Thread-3] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2016-10-11 10:00:06.369  INFO 6996 --- [       Thread-3] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2016-10-11 10:00:06.369  INFO 6996 --- [       Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase -2147482648
+2016-10-11 10:00:06.374  INFO 6996 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-10-11 10:00:06.374  INFO 6996 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2016-10-11 10:00:06.398  INFO 6996 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 05:30 min
+[INFO] Finished at: 2016-10-11T10:00:06+02:00
+[INFO] Final Memory: 81M/701M
+[INFO] ------------------------------------------------------------------------
+Batchvorgang abbrechen (J/N)? 

@@ -13,6 +13,7 @@ import java.lang.annotation.Target;
 import java.util.List;
 
 import javax.validation.Valid;
+import javax.xml.ws.http.HTTPBinding;
 
 import org.eclipse.hawkbit.ddi.json.model.DdiActionFeedback;
 import org.eclipse.hawkbit.ddi.json.model.DdiArtifact;
@@ -20,6 +21,7 @@ import org.eclipse.hawkbit.ddi.json.model.DdiCancel;
 import org.eclipse.hawkbit.ddi.json.model.DdiConfigData;
 import org.eclipse.hawkbit.ddi.json.model.DdiControllerBase;
 import org.eclipse.hawkbit.ddi.json.model.DdiDeploymentBase;
+import org.eclipse.hawkbit.ddi.json.model.DdiSoftwareConfiguration;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -67,6 +69,28 @@ public interface DdiRootControllerRestApi {
             MediaType.APPLICATION_JSON_VALUE })
     ResponseEntity<DdiControllerBase> getControllerBase(@PathVariable("tenant") final String tenant,
             @PathVariable("controllerId") final String controllerId);
+    
+    /**
+     * Root resource for an individual {@link Target}.
+     *
+     * @param tenant
+     *            of the request
+     * @param controllerId
+     *            of the target that matches to controller id
+     * @param request
+     *            the HTTP request injected by spring
+     * @return the response
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/{controllerId}/swconfig", produces = { "application/hal+json",
+            MediaType.APPLICATION_JSON_VALUE })
+    ResponseEntity<DdiSoftwareConfiguration> getControllerSoftwareConfig(@PathVariable("tenant") final String tenant,
+            @PathVariable("controllerId") final String controllerId);
+    
+    
+    @RequestMapping(method = RequestMethod.PUT, value = "/{controllerId}/swconfig", produces = { "application/hal+json",
+            MediaType.APPLICATION_JSON_VALUE })
+	ResponseEntity<HttpStatus> putSoftwareConfiguration(DdiSoftwareConfiguration swConfigData, String tenant,
+			String controllerId);
 
     /**
      * Handles GET {@link DdiArtifact} download request. This could be full or
@@ -231,5 +255,4 @@ public interface DdiRootControllerRestApi {
             @PathVariable("tenant") final String tenant,
             @PathVariable("controllerId") @NotEmpty final String controllerId,
             @PathVariable("actionId") @NotEmpty final Long actionId);
-
 }

@@ -70,6 +70,8 @@ public interface MgmtTargetRestApi {
             @RequestParam(value = MgmtRestConstants.REQUEST_PARAMETER_SORTING, required = false) final String sortParam,
             @RequestParam(value = MgmtRestConstants.REQUEST_PARAMETER_SEARCH, required = false) final String rsqlParam);
 
+    
+    
     /**
      * Handles the POST request of creating new targets. The request body must
      * always be a list of targets.
