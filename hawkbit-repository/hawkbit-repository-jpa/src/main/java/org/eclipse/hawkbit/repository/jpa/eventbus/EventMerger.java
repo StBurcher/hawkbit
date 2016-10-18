@@ -21,6 +21,7 @@ import org.eclipse.hawkbit.repository.eventbus.event.RolloutGroupChangeEvent;
 import org.eclipse.hawkbit.repository.eventbus.event.RolloutGroupCreatedEvent;
 import org.eclipse.hawkbit.repository.eventbus.event.RolloutGroupPropertyChangeEvent;
 import org.eclipse.hawkbit.repository.eventbus.event.RolloutPropertyChangeEvent;
+import org.eclipse.hawkbit.repository.eventbus.event.TargetUpdatedEvent;
 import org.eclipse.hawkbit.repository.model.Rollout;
 import org.eclipse.hawkbit.repository.model.RolloutGroup;
 import org.springframework.beans.factory.annotation.Autowired;

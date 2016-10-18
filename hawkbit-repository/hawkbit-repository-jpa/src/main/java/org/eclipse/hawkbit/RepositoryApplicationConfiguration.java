@@ -26,6 +26,8 @@ import org.eclipse.hawkbit.repository.TargetFilterQueryManagement;
 import org.eclipse.hawkbit.repository.TargetManagement;
 import org.eclipse.hawkbit.repository.TenantConfigurationManagement;
 import org.eclipse.hawkbit.repository.TenantStatsManagement;
+import org.eclipse.hawkbit.repository.eventbus.event.TargetInfoUpdateEvent;
+import org.eclipse.hawkbit.repository.eventbus.event.TargetUpdatedEvent;
 import org.eclipse.hawkbit.repository.jpa.JpaArtifactManagement;
 import org.eclipse.hawkbit.repository.jpa.JpaControllerManagement;
 import org.eclipse.hawkbit.repository.jpa.JpaDeploymentManagement;
@@ -76,6 +78,7 @@ import org.springframework.validation.beanvalidation.MethodValidationPostProcess
 
 import com.google.common.collect.Maps;
 import com.google.common.eventbus.EventBus;
+import com.google.common.eventbus.Subscribe;
 
 /**
  * General configuration for hawkBit's Repository.
@@ -273,9 +276,21 @@ public class RepositoryApplicationConfiguration extends JpaBaseConfiguration {
     @ConditionalOnMissingBean
     public TenantStatsManagement tenantStatsManagement() {
         final TenantStatsManagement mgmt = new JpaTenantStatsManagement();
+        System.out.println("TEST Works");
         eventBus.register(mgmt);
         return mgmt;
     }
+    
+	@Subscribe
+	public void test(TargetInfoUpdateEvent event) {
+		System.out.println("TEST Works");
+	}
+	
+	@Subscribe
+	public void test(TargetUpdatedEvent event) {
+		System.out.println("TEST Works");
+	}
+
 
     /**
      * {@link JpaTenantConfigurationManagement} bean.
