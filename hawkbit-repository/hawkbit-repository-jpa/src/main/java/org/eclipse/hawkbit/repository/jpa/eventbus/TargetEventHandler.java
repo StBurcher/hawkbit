@@ -13,14 +13,13 @@ import org.eclipse.hawkbit.repository.jpa.model.JpaTargetInfo;
 import org.eclipse.hawkbit.repository.model.DistributionSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
 import com.google.common.eventbus.AllowConcurrentEvents;
 import com.google.common.eventbus.Subscribe;
 
 @EventSubscriber
-@Configuration
+@Service
 public class TargetEventHandler {
 
 	@Autowired
