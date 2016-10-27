@@ -85,12 +85,6 @@ public interface DdiRootControllerRestApi {
             MediaType.APPLICATION_JSON_VALUE })
     ResponseEntity<DdiSoftwareConfiguration> getControllerSoftwareConfig(@PathVariable("tenant") final String tenant,
             @PathVariable("controllerId") final String controllerId);
-    
-    
-    @RequestMapping(method = RequestMethod.PUT, value = "/{controllerId}/swconfig", produces = { "application/hal+json",
-            MediaType.APPLICATION_JSON_VALUE })
-	ResponseEntity<HttpStatus> putSoftwareConfiguration(DdiSoftwareConfiguration swConfigData, String tenant,
-			String controllerId);
 
     /**
      * Handles GET {@link DdiArtifact} download request. This could be full or

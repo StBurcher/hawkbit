@@ -10,9 +10,7 @@ package org.eclipse.hawkbit.ddi.rest.resource;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -28,8 +26,8 @@ import org.eclipse.hawkbit.ddi.json.model.DdiControllerBase;
 import org.eclipse.hawkbit.ddi.json.model.DdiDeployment;
 import org.eclipse.hawkbit.ddi.json.model.DdiDeployment.HandlingType;
 import org.eclipse.hawkbit.ddi.json.model.DdiDeploymentBase;
-import org.eclipse.hawkbit.ddi.json.model.DdiSoftwareConfiguration;
 import org.eclipse.hawkbit.ddi.json.model.DdiResult.FinalResult;
+import org.eclipse.hawkbit.ddi.json.model.DdiSoftwareConfiguration;
 import org.eclipse.hawkbit.ddi.rest.api.DdiRootControllerRestApi;
 import org.eclipse.hawkbit.repository.ArtifactManagement;
 import org.eclipse.hawkbit.repository.ControllerManagement;
@@ -38,25 +36,13 @@ import org.eclipse.hawkbit.repository.RepositoryConstants;
 import org.eclipse.hawkbit.repository.SoftwareManagement;
 import org.eclipse.hawkbit.repository.SystemManagement;
 import org.eclipse.hawkbit.repository.exception.EntityNotFoundException;
-import org.eclipse.hawkbit.repository.jpa.DistributionSetRepository;
-import org.eclipse.hawkbit.repository.jpa.DistributionSetTypeRepository;
-import org.eclipse.hawkbit.repository.jpa.JpaEntityFactory;
-import org.eclipse.hawkbit.repository.jpa.TargetRepository;
-import org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSet;
-import org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSetType;
-import org.eclipse.hawkbit.repository.jpa.model.JpaTarget;
-import org.eclipse.hawkbit.repository.jpa.model.JpaTargetInfo;
-import org.eclipse.hawkbit.repository.jpa.specifications.DistributionSetTypeSpecification;
 import org.eclipse.hawkbit.repository.model.Action;
 import org.eclipse.hawkbit.repository.model.Action.Status;
 import org.eclipse.hawkbit.repository.model.ActionStatus;
 import org.eclipse.hawkbit.repository.model.DistributionSet;
-import org.eclipse.hawkbit.repository.model.DistributionSetType;
 import org.eclipse.hawkbit.repository.model.LocalArtifact;
 import org.eclipse.hawkbit.repository.model.SoftwareModule;
-import org.eclipse.hawkbit.repository.model.SoftwareModuleType;
 import org.eclipse.hawkbit.repository.model.Target;
-import org.eclipse.hawkbit.repository.model.TargetInfo;
 import org.eclipse.hawkbit.repository.model.TargetUpdateStatus;
 import org.eclipse.hawkbit.rest.util.RequestResponseContextHolder;
 import org.eclipse.hawkbit.rest.util.RestResourceConversionHelper;
@@ -89,15 +75,6 @@ public class DdiRootController implements DdiRootControllerRestApi {
 
 	private static final Logger LOG = LoggerFactory.getLogger(DdiRootController.class);
 	private static final String GIVEN_ACTION_IS_NOT_ASSIGNED_TO_GIVEN_TARGET = "given action ({}) is not assigned to given target ({}).";
-
-	@Autowired
-	private DistributionSetRepository distributionSetRepository;
-
-	@Autowired
-	private DistributionSetTypeRepository distributionSetTypeRepository;
-
-	@Autowired
-	private TargetRepository targetRepository;
 
 	@Autowired
 	private ControllerManagement controllerManagement;
@@ -206,38 +183,6 @@ public class DdiRootController implements DdiRootControllerRestApi {
 			LOG.warn("Controller with id {} could not be found.", controllerId);
 			throw new EntityNotFoundException("Controller does not exist");
 		}
-	}
-
-	@Override
-	public ResponseEntity<HttpStatus> putSoftwareConfiguration(
-			@Valid @RequestBody final DdiSoftwareConfiguration swConfigData,
-			@PathVariable("tenant") final String tenant, @PathVariable("controllerId") final String controllerId) {
-		// Get Object Factory
-		EntityFactory entityFactory = new JpaEntityFactory();
-		// Search for target Object with Controller ID
-		final Target target = controllerManagement.findByControllerId(controllerId);
-
-		// A Set needs a SetType
-		DistributionSetType type = entityFactory.generateDistributionSetType(swConfigData.getInstalledTypeKey(),
-				swConfigData.getInstalledTypeName(), swConfigData.getInstalledTypeDescription());
-		// Generate new Distribute Set
-		DistributionSet testSet = entityFactory.generateDistributionSet(swConfigData.getInstalledName(),
-				swConfigData.getInstalledVersion(), "-", type, null);
-		// Save SetType
-		distributionSetTypeRepository.save((JpaDistributionSetType) type);
-		testSet.setType(type);
-		List<JpaDistributionSet> setlist = new ArrayList<JpaDistributionSet>();
-		setlist.add((JpaDistributionSet) testSet);
-		distributionSetRepository.save(setlist);
-		// Add new Set to target
-		((JpaTargetInfo) target.getTargetInfo()).setInstalledDistributionSet((JpaDistributionSet) testSet);
-		((JpaTargetInfo) target.getTargetInfo()).setInstallationDate(System.currentTimeMillis());
-		((JpaTargetInfo) target.getTargetInfo()).setUpdateStatus(TargetUpdateStatus.IN_SYNC);
-		List<JpaTarget> settargets = new ArrayList<JpaTarget>();
-		settargets.add((JpaTarget) target);
-		// Save changes in target
-		targetRepository.save(settargets);
-		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
 	@Override
@@ -472,9 +417,6 @@ public class DdiRootController implements DdiRootControllerRestApi {
 			@PathVariable("tenant") final String tenant, @PathVariable("controllerId") final String controllerId) {
 		controllerManagement.updateLastTargetQuery(controllerId, IpUtil
 				.getClientIpFromRequest(requestResponseContextHolder.getHttpServletRequest(), securityProperties));
-
-		controllerManagement.updateControllerAttributes(controllerId, configData.getData());
-
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 

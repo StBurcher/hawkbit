@@ -11,8 +11,8 @@ import org.eclipse.hawkbit.repository.jpa.TargetInfoRepository;
 import org.eclipse.hawkbit.repository.jpa.model.JpaDistributionSet;
 import org.eclipse.hawkbit.repository.jpa.model.JpaTargetInfo;
 import org.eclipse.hawkbit.repository.model.DistributionSet;
+import org.eclipse.hawkbit.security.SystemSecurityContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import com.google.common.eventbus.AllowConcurrentEvents;
@@ -25,6 +25,8 @@ public class TargetEventHandler {
 	@Autowired
 	private DistributionSetManagement distributionSetManagement;
 	@Autowired
+	private SystemSecurityContext systemSecurityContext;
+	@Autowired
 	private TargetInfoRepository targetInfoRepository;
 
 	@Subscribe
@@ -34,15 +36,17 @@ public class TargetEventHandler {
 			JpaTargetInfo info = (JpaTargetInfo) ((TargetInfoUpdateEvent) event).getEntity();
 			Map<String, String> attributesMap = info.getControllerAttributes();
 			if (attributesMap.containsKey("DSInformation") == true) {
-				DistributionSet set = distributionSetManagement.findDistributionSetByNameAndVersion(
-						attributesMap.get("installedName"), attributesMap.get("installedVersion"));
-
+				
+				DistributionSet set = systemSecurityContext.runAsSystem(() -> distributionSetManagement.findDistributionSetByNameAndVersion(
+                        attributesMap.get("installedName"), attributesMap.get("installedVersion")));
 				if (set != null) {
 					info.setInstalledDistributionSet((JpaDistributionSet) set);
 					attributesMap.remove("installedName");
 					attributesMap.remove("installedVersion");
 					attributesMap.remove("DSInformation");
 					targetInfoRepository.save(info);
+				} else {
+					
 				}
 			}
 		} else if (event instanceof DistributionSetUpdateEvent) {
