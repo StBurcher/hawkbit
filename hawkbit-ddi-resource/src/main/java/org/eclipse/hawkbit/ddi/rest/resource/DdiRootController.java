@@ -37,7 +37,9 @@ import org.eclipse.hawkbit.repository.SoftwareManagement;
 import org.eclipse.hawkbit.repository.SystemManagement;
 import org.eclipse.hawkbit.repository.exception.EntityNotFoundException;
 import org.eclipse.hawkbit.repository.model.Action;
+import org.eclipse.hawkbit.repository.model.Action.ActionType;
 import org.eclipse.hawkbit.repository.model.Action.Status;
+import org.eclipse.hawkbit.repository.model.Action.UpdateType;
 import org.eclipse.hawkbit.repository.model.ActionStatus;
 import org.eclipse.hawkbit.repository.model.DistributionSet;
 import org.eclipse.hawkbit.repository.model.LocalArtifact;
@@ -300,9 +302,10 @@ public class DdiRootController implements DdiRootControllerRestApi {
 					systemManagement);
 
 			final HandlingType handlingType = action.isForce() ? HandlingType.FORCED : HandlingType.ATTEMPT;
+			final String updateStatus = action.getUpdateType() == null ? "" : action.getUpdateType().toString();
 
 			final DdiDeploymentBase base = new DdiDeploymentBase(Long.toString(action.getId()),
-					new DdiDeployment(handlingType, handlingType, chunks));
+					new DdiDeployment(handlingType, handlingType, chunks,  updateStatus));
 
 			LOG.debug("Found an active UpdateAction for target {}. returning deyploment: {}", controllerId, base);
 
@@ -373,8 +376,23 @@ public class DdiRootController implements DdiRootControllerRestApi {
 		case CLOSED:
 			handleClosedUpdateStatus(feedback, controllerId, actionid, actionStatus);
 			break;
+		case DOWNLOADED:
+			LOG.debug("Controller reported intermediate status (actionid: {}, controllerId: {}) as we got {} report.",
+					actionid, controllerId, feedback.getStatus().getExecution());
+			actionStatus.setStatus(Status.DOWNLOADED);
+			
+			if(action.getActionType() == ActionType.TIMEFORCED) {
+				action.setUpdateType(UpdateType.AFTER);
+			} else {
+				action.setUpdateType(UpdateType.WAIT);
+			}
+			
+			actionStatus.addMessage(
+					RepositoryConstants.SERVER_MESSAGE_PREFIX + "Target reported " + feedback.getStatus().getExecution());
+			break;
 		default:
 			handleDefaultUpdateStatus(feedback, controllerId, actionid, actionStatus);
+			action.setUpdateType(UpdateType.RUN);
 			break;
 		}
 

@@ -24,6 +24,8 @@ public class DdiDeployment {
 
     private List<DdiChunk> chunks;
 
+	private String updateStatus;
+
     /**
      * Constructor.
      */
@@ -41,10 +43,12 @@ public class DdiDeployment {
      * @param chunks
      *            to handle.
      */
-    public DdiDeployment(final HandlingType download, final HandlingType update, final List<DdiChunk> chunks) {
+    public DdiDeployment(final HandlingType download, final HandlingType update, final List<DdiChunk> chunks, final String updateStatus) {
         this.download = download;
         this.update = update;
         this.chunks = chunks;
+        this.updateStatus = updateStatus;
+        
     }
 
     public HandlingType getDownload() {
@@ -54,6 +58,10 @@ public class DdiDeployment {
     public HandlingType getUpdate() {
         return update;
     }
+    
+    public String getUpdateStatus() {
+        return updateStatus;
+    }
 
     public List<DdiChunk> getChunks() {
         if (chunks == null) {
@@ -62,6 +70,7 @@ public class DdiDeployment {
         
         return Collections.unmodifiableList(chunks);
     }
+    
 
     /**
      * The handling type for the update action.

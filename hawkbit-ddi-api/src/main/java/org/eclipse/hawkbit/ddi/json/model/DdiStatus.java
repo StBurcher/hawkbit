@@ -22,100 +22,105 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 public class DdiStatus {
 
-    @NotNull
-    private final ExecutionStatus execution;
+	@NotNull
+	private final ExecutionStatus execution;
 
-    @NotNull
-    private final DdiResult result;
+	@NotNull
+	private final DdiResult result;
 
-    private final List<String> details;
+	private final List<String> details;
 
-    /**
-     * Constructor.
-     *
-     * @param execution
-     *            status
-     * @param result
-     *            information
-     * @param details
-     *            as optional addition
-     */
-    @JsonCreator
-    public DdiStatus(@JsonProperty("execution") final ExecutionStatus execution,
-            @JsonProperty("result") final DdiResult result, @JsonProperty("details") final List<String> details) {
-        super();
-        this.execution = execution;
-        this.result = result;
-        this.details = details;
-    }
+	/**
+	 * Constructor.
+	 *
+	 * @param execution
+	 *            status
+	 * @param result
+	 *            information
+	 * @param details
+	 *            as optional addition
+	 */
+	@JsonCreator
+	public DdiStatus(@JsonProperty("execution") final ExecutionStatus execution,
+			@JsonProperty("result") final DdiResult result, @JsonProperty("details") final List<String> details) {
+		super();
+		this.execution = execution;
+		this.result = result;
+		this.details = details;
+	}
 
-    public ExecutionStatus getExecution() {
-        return execution;
-    }
+	public ExecutionStatus getExecution() {
+		return execution;
+	}
 
-    public DdiResult getResult() {
-        return result;
-    }
+	public DdiResult getResult() {
+		return result;
+	}
 
-    public List<String> getDetails() {
-        if (details == null) {
-            return Collections.emptyList();
-        }        
-        
-        return Collections.unmodifiableList(details);
-    }
+	public List<String> getDetails() {
+		if (details == null) {
+			return Collections.emptyList();
+		}
 
-    /**
-     * The element status contains information about the execution of the
-     * operation.
-     *
-     */
-    public enum ExecutionStatus {
-        /**
-         * Execution of the action has finished.
-         */
-        CLOSED("closed"),
+		return Collections.unmodifiableList(details);
+	}
 
-        /**
-         * Execution has started but has not yet finished.
-         */
-        PROCEEDING("proceeding"),
+	/**
+	 * The element status contains information about the execution of the
+	 * operation.
+	 *
+	 */
+	public enum ExecutionStatus {
+		/**
+		 * Execution of the action has finished.
+		 */
+		CLOSED("closed"),
 
-        /**
-         * Execution was suspended from outside.
-         */
-        CANCELED("canceled"),
+		/**
+		 * Execution has started but has not yet finished.
+		 */
+		PROCEEDING("proceeding"),
 
-        /**
-         * Action has been noticed and is intended to run.
-         */
-        SCHEDULED("scheduled"),
+		/**
+		 * Execution was suspended from outside.
+		 */
+		CANCELED("canceled"),
 
-        /**
-         * Action was not accepted.
-         */
-        REJECTED("rejected"),
+		/**
+		 * Action has been noticed and is intended to run.
+		 */
+		SCHEDULED("scheduled"),
 
-        /**
-         * Action is started after a reset, power loss, etc.
-         */
-        RESUMED("resumed");
+		/**
+		 * Action was not accepted.
+		 */
+		REJECTED("rejected"),
 
-        private String name;
+		/**
+		 * Action is started after a reset, power loss, etc.
+		 */
+		RESUMED("resumed"),
 
-        ExecutionStatus(final String name) {
-            this.name = name;
-        }
+		/**
+		 * Action is started after a reset, power loss, etc.
+		 */
+		DOWNLOADED("downloaded");
 
-        @JsonValue
-        public String getName() {
-            return name;
-        }
-    }
+		private String name;
 
-    @Override
-    public String toString() {
-        return "Status [execution=" + execution + ", result=" + result + ", details=" + details + "]";
-    }
+		ExecutionStatus(final String name) {
+			this.name = name;
+		}
+
+		@JsonValue
+		public String getName() {
+			return name;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Status [execution=" + execution + ", result=" + result + ", details=" + details + "]";
+	}
 
 }

@@ -61,6 +61,17 @@ public interface Action extends TenantAwareBaseEntity {
     ActionType getActionType();
 
     /**
+     * @return the {@link ActionType}
+     */
+    void setUpdateType(UpdateType updateType);
+    
+    /**
+     * @return the {@link ActionType}
+     */
+    UpdateType getUpdateType();
+
+
+    /**
      * @return list of {@link ActionStatus} entries.
      */
     List<ActionStatus> getActionStatus();
@@ -190,7 +201,13 @@ public interface Action extends TenantAwareBaseEntity {
          * Action is in waiting state, e.g. the action is scheduled in a rollout
          * but not yet activated.
          */
-        SCHEDULED;
+        SCHEDULED,
+    	
+        
+        /**
+         * Action requests download by this target which has finished.
+         */
+        DOWNLOADED;
     }
 
     /**
@@ -214,5 +231,26 @@ public interface Action extends TenantAwareBaseEntity {
          * after that.
          */
         TIMEFORCED;
+    }
+    
+    /**
+     * The action type for this action relation.
+     *
+     */
+    public enum UpdateType {
+        /**
+         * Update action is currently running
+         */
+        RUN,
+
+        /**
+         * Update action is waiting.
+         */
+        WAIT,
+
+        /**
+         * Update action is waiting for event or a specific time.
+         */
+        AFTER;
     }
 }

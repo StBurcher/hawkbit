@@ -75,6 +75,10 @@ public class JpaAction extends AbstractJpaTenantAwareBaseEntity implements Actio
     @Enumerated(EnumType.STRING)
     @NotNull
     private ActionType actionType;
+    
+    @Column(name = "update_type", length = 16)
+    @Enumerated(EnumType.STRING)
+    private UpdateType updateType;
 
     @Column(name = "forced_time")
     private long forcedTime;
@@ -133,6 +137,15 @@ public class JpaAction extends AbstractJpaTenantAwareBaseEntity implements Actio
         return actionType;
     }
 
+    public void setUpdateType(final UpdateType updateType) {
+        this.updateType = updateType;
+    }
+
+    @Override
+    public UpdateType getUpdateType() {
+        return updateType;
+    }
+    
     @Override
     public List<ActionStatus> getActionStatus() {
         if (actionStatus == null) {
