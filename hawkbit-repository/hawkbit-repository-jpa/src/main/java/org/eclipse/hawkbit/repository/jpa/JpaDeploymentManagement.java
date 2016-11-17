@@ -58,6 +58,7 @@ import org.eclipse.hawkbit.repository.jpa.specifications.TargetSpecifications;
 import org.eclipse.hawkbit.repository.model.Action;
 import org.eclipse.hawkbit.repository.model.Action.ActionType;
 import org.eclipse.hawkbit.repository.model.Action.Status;
+import org.eclipse.hawkbit.repository.model.Action.UpdateType;
 import org.eclipse.hawkbit.repository.model.ActionStatus;
 import org.eclipse.hawkbit.repository.model.ActionWithStatusCount;
 import org.eclipse.hawkbit.repository.model.DistributionSet;
@@ -143,7 +144,7 @@ public class JpaDeploymentManagement implements DeploymentManagement {
 
         return assignDistributionSetByTargetId((JpaDistributionSet) pset,
                 targets.stream().map(target -> target.getControllerId()).collect(Collectors.toList()),
-                ActionType.FORCED, org.eclipse.hawkbit.repository.model.RepositoryModelConstants.NO_FORCE_TIME);
+                ActionType.FORCED, org.eclipse.hawkbit.repository.model.RepositoryModelConstants.NO_FORCE_TIME, UpdateType.COMBINED);
 
     }
 
@@ -153,7 +154,7 @@ public class JpaDeploymentManagement implements DeploymentManagement {
     @CacheEvict(value = { "distributionUsageAssigned" }, allEntries = true)
     public DistributionSetAssignmentResult assignDistributionSet(final Long dsID, final String... targetIDs) {
         return assignDistributionSet(dsID, ActionType.FORCED,
-                org.eclipse.hawkbit.repository.model.RepositoryModelConstants.NO_FORCE_TIME, targetIDs);
+                org.eclipse.hawkbit.repository.model.RepositoryModelConstants.NO_FORCE_TIME, UpdateType.COMBINED, targetIDs);
     }
 
     @Override
@@ -164,9 +165,9 @@ public class JpaDeploymentManagement implements DeploymentManagement {
     // https://jira.sonarsource.com/browse/SONARJAVA-1478
     @SuppressWarnings({ "squid:S2095" })
     public DistributionSetAssignmentResult assignDistributionSet(final Long dsID, final ActionType actionType,
-            final long forcedTimestamp, final String... targetIDs) {
+            final long forcedTimestamp, final UpdateType updateType, final String... targetIDs) {
         return assignDistributionSet(dsID, Arrays.stream(targetIDs)
-                .map(t -> new TargetWithActionType(t, actionType, forcedTimestamp)).collect(Collectors.toList()));
+                .map(t -> new TargetWithActionType(t, actionType, forcedTimestamp, updateType)).collect(Collectors.toList()));
     }
 
     @Override
@@ -331,6 +332,7 @@ public class JpaDeploymentManagement implements DeploymentManagement {
         actionForTarget.setForcedTime(targetWithActionType.getForceTime());
         actionForTarget.setActive(true);
         actionForTarget.setStatus(Status.RUNNING);
+        actionForTarget.setUpdateType(targetWithActionType.getUpdateType());
         actionForTarget.setTarget(target);
         actionForTarget.setDistributionSet(set);
         actionForTarget.setRollout(rollout);
@@ -398,10 +400,10 @@ public class JpaDeploymentManagement implements DeploymentManagement {
     }
 
     private DistributionSetAssignmentResult assignDistributionSetByTargetId(@NotNull final JpaDistributionSet set,
-            @NotEmpty final List<String> tIDs, final ActionType actionType, final long forcedTime) {
+            @NotEmpty final List<String> tIDs, final ActionType actionType, final long forcedTime, final UpdateType updateType) {
 
         return assignDistributionSetToTargets(set, tIDs.stream()
-                .map(t -> new TargetWithActionType(t, actionType, forcedTime)).collect(Collectors.toList()), null,
+                .map(t -> new TargetWithActionType(t, actionType, forcedTime, updateType)).collect(Collectors.toList()), null,
                 null);
     }
 
@@ -474,6 +476,14 @@ public class JpaDeploymentManagement implements DeploymentManagement {
         return actionRepository.save(mergedAction);
     }
 
+    
+	@Override
+	@Modifying
+    @Transactional(isolation = Isolation.READ_COMMITTED)
+	public Action updateAction(Action action) {
+		 final JpaAction mergedAction = (JpaAction) entityManager.merge(action);
+		 return actionRepository.save(mergedAction);
+	}
     @Override
     @Modifying
     @Transactional(isolation = Isolation.READ_COMMITTED)
@@ -659,6 +669,8 @@ public class JpaDeploymentManagement implements DeploymentManagement {
         }
         return action;
     }
+    
+    
 
     @Override
     public Page<ActionStatus> findActionStatusByAction(final Pageable pageReq, final Action action) {
@@ -710,4 +722,6 @@ public class JpaDeploymentManagement implements DeploymentManagement {
     public Slice<Action> findActionsAll(final Pageable pageable) {
         return convertAcPage(actionRepository.findAll(pageable), pageable);
     }
+
+
 }

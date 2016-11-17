@@ -11,7 +11,9 @@ package org.eclipse.hawkbit.mgmt.rest.resource;
 import org.eclipse.hawkbit.mgmt.json.model.MgmtBaseEntity;
 import org.eclipse.hawkbit.mgmt.json.model.MgmtNamedEntity;
 import org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtActionType;
+import org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtUpdateType;
 import org.eclipse.hawkbit.repository.model.Action.ActionType;
+import org.eclipse.hawkbit.repository.model.Action.UpdateType;
 import org.eclipse.hawkbit.repository.model.NamedEntity;
 import org.eclipse.hawkbit.repository.model.TenantAwareBaseEntity;
 
@@ -25,57 +27,64 @@ import org.eclipse.hawkbit.repository.model.TenantAwareBaseEntity;
  */
 final class MgmtRestModelMapper {
 
-    // private constructor, utility class
-    private MgmtRestModelMapper() {
+	// private constructor, utility class
+	private MgmtRestModelMapper() {
 
-    }
+	}
 
-    static void mapBaseToBase(final MgmtBaseEntity response, final TenantAwareBaseEntity base) {
-        response.setCreatedBy(base.getCreatedBy());
-        response.setLastModifiedBy(base.getLastModifiedBy());
-        if (base.getCreatedAt() != null) {
-            response.setCreatedAt(base.getCreatedAt());
-        }
-        if (base.getLastModifiedAt() != null) {
-            response.setLastModifiedAt(base.getLastModifiedAt());
-        }
-    }
+	static void mapBaseToBase(final MgmtBaseEntity response, final TenantAwareBaseEntity base) {
+		response.setCreatedBy(base.getCreatedBy());
+		response.setLastModifiedBy(base.getLastModifiedBy());
+		if (base.getCreatedAt() != null) {
+			response.setCreatedAt(base.getCreatedAt());
+		}
+		if (base.getLastModifiedAt() != null) {
+			response.setLastModifiedAt(base.getLastModifiedAt());
+		}
+	}
 
-    static void mapNamedToNamed(final MgmtNamedEntity response, final NamedEntity base) {
-        mapBaseToBase(response, base);
+	static void mapNamedToNamed(final MgmtNamedEntity response, final NamedEntity base) {
+		mapBaseToBase(response, base);
 
-        response.setName(base.getName());
-        response.setDescription(base.getDescription());
-    }
+		response.setName(base.getName());
+		response.setDescription(base.getDescription());
+	}
 
-    /**
-     * Convert a action rest type to a action repository type.
-     * 
-     * @param actionTypeRest
-     *            the rest type
-     * @return <null> or the action repository type
-     */
-    /**
-     * Convert a action rest type to a action repository type.
-     * 
-     * @param actionTypeRest
-     *            the rest type
-     * @return <null> or the action repository type
-     */
-    public static ActionType convertActionType(final MgmtActionType actionTypeRest) {
-        if (actionTypeRest == null) {
-            return null;
-        }
+	/**
+	 * Convert a action rest type to a action repository type.
+	 * 
+	 * @param actionTypeRest
+	 *            the rest type
+	 * @return <null> or the action repository type
+	 */
+	public static ActionType convertActionType(final MgmtActionType actionTypeRest) {
+		if (actionTypeRest == null) {
+			return null;
+		}
 
-        switch (actionTypeRest) {
-        case SOFT:
-            return ActionType.SOFT;
-        case FORCED:
-            return ActionType.FORCED;
-        case TIMEFORCED:
-            return ActionType.TIMEFORCED;
-        default:
-            throw new IllegalStateException("Action Type is not supported");
-        }
-    }
+		switch (actionTypeRest) {
+		case SOFT:
+			return ActionType.SOFT;
+		case FORCED:
+			return ActionType.FORCED;
+		case TIMEFORCED:
+			return ActionType.TIMEFORCED;
+		default:
+			throw new IllegalStateException("Action Type is not supported");
+		}
+	}
+
+	public static UpdateType convertUpdateType(final MgmtUpdateType updateTypeRest) {
+		if (updateTypeRest == null) {
+			return null;
+		}
+		switch (updateTypeRest) {
+		case COMBINED:
+			return UpdateType.COMBINED;
+		case SEPARATED:
+			return UpdateType.SEPARATED;
+		default:
+			throw new IllegalStateException("Update Type is not supported");
+		}
+	}
 }

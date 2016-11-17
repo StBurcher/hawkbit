@@ -34,6 +34,7 @@ import org.eclipse.hawkbit.repository.jpa.rollout.condition.RolloutGroupConditio
 import org.eclipse.hawkbit.repository.jpa.rsql.RSQLUtility;
 import org.eclipse.hawkbit.repository.model.Action;
 import org.eclipse.hawkbit.repository.model.Action.ActionType;
+import org.eclipse.hawkbit.repository.model.Action.UpdateType;
 import org.eclipse.hawkbit.repository.model.DistributionSet;
 import org.eclipse.hawkbit.repository.model.Rollout;
 import org.eclipse.hawkbit.repository.model.Rollout.RolloutStatus;
@@ -328,7 +329,7 @@ public class JpaRolloutManagement implements RolloutManagement {
             // firstgroup can already be started
             if (iGroup == 0) {
                 final List<TargetWithActionType> targetsWithActionType = targetGroup.stream()
-                        .map(t -> new TargetWithActionType(t.getControllerId(), actionType, forceTime))
+                        .map(t -> new TargetWithActionType(t.getControllerId(), actionType, forceTime, UpdateType.COMBINED))
                         .collect(Collectors.toList());
                 deploymentManagement.assignDistributionSet(distributionSet.getId(), targetsWithActionType, rollout,
                         rolloutGroup);

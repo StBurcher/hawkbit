@@ -9,6 +9,7 @@
 package org.eclipse.hawkbit.repository.model;
 
 import org.eclipse.hawkbit.repository.model.Action.ActionType;
+import org.eclipse.hawkbit.repository.model.Action.UpdateType;
 
 /**
  * A custom view on {@link Target} with {@link ActionType}.
@@ -20,6 +21,7 @@ public class TargetWithActionType {
 
     private final String targetId;
     private final ActionType actionType;
+    private final UpdateType updateType;
     private final long forceTime;
 
     /**
@@ -27,10 +29,22 @@ public class TargetWithActionType {
      * @param actionType
      * @param forceTime
      */
-    public TargetWithActionType(final String targetId, final ActionType actionType, final long forceTime) {
+//    public TargetWithActionType(final String targetId, final ActionType actionType, final long forceTime) {
+//        this.targetId = targetId;
+//        this.actionType = actionType;
+//        this.forceTime = forceTime;
+//    }
+    
+    /**
+     * @param targetId
+     * @param actionType
+     * @param forceTime
+     */
+    public TargetWithActionType(final String targetId, final ActionType actionType, final long forceTime, final UpdateType updateType) {
         this.targetId = targetId;
         this.actionType = actionType;
         this.forceTime = forceTime;
+        this.updateType = updateType;
     }
 
     /**
@@ -60,4 +74,8 @@ public class TargetWithActionType {
     public String getTargetId() {
         return targetId;
     }
+
+	public UpdateType getUpdateType() {
+		return updateType;
+	}
 }

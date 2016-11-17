@@ -263,5 +263,18 @@ public interface MgmtTargetRestApi {
             "application/hal+json", MediaType.APPLICATION_JSON_VALUE })
     ResponseEntity<MgmtDistributionSet> getInstalledDistributionSet(
             @PathVariable("controllerId") final String controllerId);
+    
+    /**
+     * Changes the assigned distribution set of a target.
+     *
+     * @param controllerId
+     *            of the target to change
+     * @param dsId
+     *            of the distributionset that is to be assigned
+     * @return http status
+     */
+    @RequestMapping(method = RequestMethod.POST, value = "/{controllerId}/actions/{actionId}", produces = { "application/hal+json", MediaType.APPLICATION_JSON_VALUE })
+    ResponseEntity<Void> postStartUpdate(@PathVariable("controllerId") final String controllerId,
+    		@PathVariable("actionId") final Long actionId, @RequestParam(value = "force", required = false, defaultValue = "false") final boolean force);
 
 }

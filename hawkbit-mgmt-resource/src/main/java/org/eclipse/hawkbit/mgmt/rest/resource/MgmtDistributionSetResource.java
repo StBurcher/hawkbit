@@ -35,6 +35,7 @@ import org.eclipse.hawkbit.repository.SoftwareManagement;
 import org.eclipse.hawkbit.repository.SystemManagement;
 import org.eclipse.hawkbit.repository.TargetManagement;
 import org.eclipse.hawkbit.repository.exception.EntityNotFoundException;
+import org.eclipse.hawkbit.repository.model.Action.UpdateType;
 import org.eclipse.hawkbit.repository.model.DistributionSet;
 import org.eclipse.hawkbit.repository.model.DistributionSetMetadata;
 import org.eclipse.hawkbit.repository.model.SoftwareModule;
@@ -232,8 +233,10 @@ public class MgmtDistributionSetResource implements MgmtDistributionSetRestApi {
         final DistributionSetAssignmentResult assignDistributionSet = this.deployManagament.assignDistributionSet(
                 distributionSetId,
                 targetIds.stream()
-                        .map(t -> new TargetWithActionType(t.getId(),
-                                MgmtRestModelMapper.convertActionType(t.getType()), t.getForcetime()))
+                        .map(t -> new TargetWithActionType(
+                        		t.getId(),
+                                MgmtRestModelMapper.convertActionType(t.getType()),
+                                t.getForcetime(), UpdateType.COMBINED))
                         .collect(Collectors.toList()));
 
         return new ResponseEntity<>(MgmtDistributionSetMapper.toResponse(assignDistributionSet), HttpStatus.OK);

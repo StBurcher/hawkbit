@@ -102,7 +102,7 @@ public class DdiStatus {
 		RESUMED("resumed"),
 
 		/**
-		 * Action is started after a reset, power loss, etc.
+		 * Action has finished the file transfer and is ready to install.
 		 */
 		DOWNLOADED("downloaded");
 

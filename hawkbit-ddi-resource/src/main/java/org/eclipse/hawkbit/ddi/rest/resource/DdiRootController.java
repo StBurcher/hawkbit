@@ -173,12 +173,13 @@ public class DdiRootController implements DdiRootControllerRestApi {
 			} else {
 				LOG.warn("Assigned Software Configuration for controller id {} could not be found.", controllerId);
 			}
-			//Both Sets not present then error
-			if (target.getTargetInfo().getInstalledDistributionSet() == null && target.getAssignedDistributionSet() == null) {
+			// Both Sets not present then error
+			if (target.getTargetInfo().getInstalledDistributionSet() == null
+					&& target.getAssignedDistributionSet() == null) {
 				LOG.warn("Software Configuration for controller id {} could not be found.", controllerId);
 				throw new EntityNotFoundException("Software Configuration does not exist");
 			} else {
-				//Otherwise ok
+				// Otherwise ok
 				return new ResponseEntity<>(setConfig, HttpStatus.OK);
 			}
 		} else {
@@ -302,10 +303,14 @@ public class DdiRootController implements DdiRootControllerRestApi {
 					systemManagement);
 
 			final HandlingType handlingType = action.isForce() ? HandlingType.FORCED : HandlingType.ATTEMPT;
+
+			final HandlingType updateHandlingType = action.getStatus() == Status.START
+					&& UpdateType.SEPARATED == action.getUpdateType() ? handlingType : HandlingType.SKIP;
+
 			final String updateStatus = action.getUpdateType() == null ? "" : action.getUpdateType().toString();
 
 			final DdiDeploymentBase base = new DdiDeploymentBase(Long.toString(action.getId()),
-					new DdiDeployment(handlingType, handlingType, chunks,  updateStatus));
+					new DdiDeployment(handlingType, updateHandlingType, chunks, updateStatus));
 
 			LOG.debug("Found an active UpdateAction for target {}. returning deyploment: {}", controllerId, base);
 
@@ -379,20 +384,14 @@ public class DdiRootController implements DdiRootControllerRestApi {
 		case DOWNLOADED:
 			LOG.debug("Controller reported intermediate status (actionid: {}, controllerId: {}) as we got {} report.",
 					actionid, controllerId, feedback.getStatus().getExecution());
-			actionStatus.setStatus(Status.DOWNLOADED);
-			
-			if(action.getActionType() == ActionType.TIMEFORCED) {
-				action.setUpdateType(UpdateType.AFTER);
-			} else {
-				action.setUpdateType(UpdateType.WAIT);
+			if(action.getStatus() != Status.START || action.getUpdateType() != UpdateType.SEPARATED) {
+				actionStatus.setStatus(Status.DOWNLOADED);	
 			}
-			
-			actionStatus.addMessage(
-					RepositoryConstants.SERVER_MESSAGE_PREFIX + "Target reported " + feedback.getStatus().getExecution());
+			actionStatus.addMessage(RepositoryConstants.SERVER_MESSAGE_PREFIX + "Target reported "
+					+ feedback.getStatus().getExecution());
 			break;
 		default:
 			handleDefaultUpdateStatus(feedback, controllerId, actionid, actionStatus);
-			action.setUpdateType(UpdateType.RUN);
 			break;
 		}
 

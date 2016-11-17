@@ -30,6 +30,7 @@ import org.eclipse.hawkbit.repository.EntityFactory;
 import org.eclipse.hawkbit.repository.TagManagement;
 import org.eclipse.hawkbit.repository.TargetManagement;
 import org.eclipse.hawkbit.repository.model.Action.ActionType;
+import org.eclipse.hawkbit.repository.model.Action.UpdateType;
 import org.eclipse.hawkbit.repository.model.Target;
 import org.eclipse.hawkbit.ui.common.DistributionSetIdName;
 import org.eclipse.hawkbit.ui.common.tagdetails.AbstractTagToken.TagData;
@@ -327,7 +328,7 @@ public class BulkUploadHandler extends CustomComponent
                 return i18n.get("message.bulk.upload.assignment.failed");
             }
             deploymentManagement.assignDistributionSet(targetBulkUpload.getDsNameAndVersion().getId(), actionType,
-                    forcedTimeStamp, targetsList.toArray(new String[targetsList.size()]));
+                    forcedTimeStamp, UpdateType.COMBINED, targetsList.toArray(new String[targetsList.size()]));
             return null;
         }
 

@@ -171,7 +171,7 @@ public class ManangementConfirmationWindowLayout extends AbstractConfirmationWin
             tempIdList = saveAssignedList.get(mapEntry.getKey());
             final String[] ids = tempIdList.stream().map(t -> t.getControllerId()).toArray(size -> new String[size]);
             final DistributionSetAssignmentResult distributionSetAssignmentResult = deploymentManagement
-                    .assignDistributionSet(mapEntry.getKey(), actionType, forcedTimeStamp, ids);
+                    .assignDistributionSet(mapEntry.getKey(), actionType, forcedTimeStamp, null, ids);
 
             if (distributionSetAssignmentResult.getAssigned() > 0) {
                 successAssignmentCount += distributionSetAssignmentResult.getAssigned();

@@ -5,6 +5,7 @@ package org.eclipse.hawkbit.mgmt.json.model.target;
 
 import org.eclipse.hawkbit.mgmt.json.model.MgmtId;
 import org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtActionType;
+import org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtUpdateType;
 
 /**
  * Request Body of DistributionSet for assignment operations (ID only).
@@ -13,6 +14,7 @@ import org.eclipse.hawkbit.mgmt.json.model.distributionset.MgmtActionType;
 public class MgmtDistributionSetAssigment extends MgmtId {
     private long forcetime;
     private MgmtActionType type;
+    private MgmtUpdateType updateType;
 
     /**
      * @return the type
@@ -43,5 +45,13 @@ public class MgmtDistributionSetAssigment extends MgmtId {
     public void setForcetime(final long forcetime) {
         this.forcetime = forcetime;
     }
+
+	public MgmtUpdateType getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(MgmtUpdateType updateType) {
+		this.updateType = updateType;
+	}
 
 }

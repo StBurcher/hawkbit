@@ -202,12 +202,16 @@ public interface Action extends TenantAwareBaseEntity {
          * but not yet activated.
          */
         SCHEDULED,
-    	
         
         /**
          * Action requests download by this target which has finished.
          */
-        DOWNLOADED;
+        DOWNLOADED,
+    	
+    	/**
+         * Action requests target has to start installation.
+         */
+        START;
     }
 
     /**
@@ -238,15 +242,15 @@ public interface Action extends TenantAwareBaseEntity {
      *
      */
     public enum UpdateType {
-        /**
-         * Update action is currently running
-         */
-        RUN,
+    	/**
+    	 * Normal Update Installation and Download in one Turn
+    	 */
+        COMBINED,
 
         /**
          * Update action is waiting.
          */
-        WAIT,
+        SEPARATED,
 
         /**
          * Update action is waiting for event or a specific time.

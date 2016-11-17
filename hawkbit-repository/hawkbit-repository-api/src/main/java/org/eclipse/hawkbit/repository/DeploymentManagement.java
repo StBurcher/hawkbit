@@ -21,6 +21,7 @@ import org.eclipse.hawkbit.repository.exception.RSQLParameterUnsupportedFieldExc
 import org.eclipse.hawkbit.repository.model.Action;
 import org.eclipse.hawkbit.repository.model.Action.ActionType;
 import org.eclipse.hawkbit.repository.model.Action.Status;
+import org.eclipse.hawkbit.repository.model.Action.UpdateType;
 import org.eclipse.hawkbit.repository.model.ActionStatus;
 import org.eclipse.hawkbit.repository.model.ActionWithStatusCount;
 import org.eclipse.hawkbit.repository.model.DistributionSet;
@@ -84,7 +85,7 @@ public interface DeploymentManagement {
      */
     @PreAuthorize(SpringEvalExpressions.HAS_AUTH_READ_REPOSITORY_AND_UPDATE_TARGET)
     DistributionSetAssignmentResult assignDistributionSet(@NotNull final Long dsID, final ActionType actionType,
-            final long forcedTimestamp, @NotEmpty final String... targetIDs);
+            final long forcedTimestamp, final UpdateType updateType, @NotEmpty final String... targetIDs);
 
     /**
      * method assigns the {@link DistributionSet} to all {@link Target}s by
@@ -486,6 +487,14 @@ public interface DeploymentManagement {
      */
     @PreAuthorize(SpringEvalExpressions.HAS_AUTH_UPDATE_TARGET)
     Action forceTargetAction(@NotNull Long actionId);
+    
+    /**
+     * Updates a {@link Action} 
+     * @param actionId the ID of the action
+     * @return the updated or the found {@link Action}
+     */
+    @PreAuthorize(SpringEvalExpressions.HAS_AUTH_UPDATE_TARGET)
+    Action updateAction(@NotNull Action action);
 
     /**
      * Starting an action which is scheduled, e.g. in case of roll out a
